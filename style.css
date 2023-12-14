@@ -19,7 +19,7 @@ a {
 body {
     margin: 10px 0px;
     padding: 0px;
-    background: #fefbea;
+    background: #fff0db;
 }
 
 .container {
@@ -68,11 +68,13 @@ header {
 
 .profiles {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 15px;
+    justify-content: center;
 }
 
 .profile {
-    flex: 1;
+    width: 240px;
     text-align: center;
 }
 
@@ -106,10 +108,9 @@ header {
     display: block;
 }
 
-@media (min-width: 500px) and (max-width: 600px) {
-    .img-profile {
-        width: 120px;
-        height: 120px;
+@media (max-width: 500px) {
+    .profile {
+        width: 175px;
     }
 }
 
@@ -124,13 +125,5 @@ header {
 
     .main {
         margin: 0px;
-    }
-
-    .profiles {
-        display: block;
-    }
-
-    .profile {
-        margin: 5px 0px;
     }
 }
