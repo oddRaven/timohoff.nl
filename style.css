@@ -22,6 +22,16 @@ body {
     background: #fff0db;
 }
 
+table {
+    margin: 0px auto;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid #000;
+}
+
 .container {
     max-width: 1100px;
     margin: 0px auto;
