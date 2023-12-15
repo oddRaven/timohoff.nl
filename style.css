@@ -13,7 +13,11 @@ div, p{
 
 a {
     text-decoration: none;
-    color: #FF3232;
+    color: #08a045;
+}
+
+a:hover {
+    color: #0b6e4f
 }
 
 body {
@@ -53,6 +57,9 @@ table td, table th {
     height: 100%;
     position: fixed;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 menu {
