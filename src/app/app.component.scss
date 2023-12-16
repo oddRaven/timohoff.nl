@@ -1,0 +1,76 @@
+h1 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 5px 0px;
+}
+
+div, p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #08a045;
+}
+
+a:hover {
+    color: #0b6e4f
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.main {
+    margin-right: 100px;
+}
+
+.section-menu {
+    width: 100px;
+    height: 100%;
+    float: right;
+}
+
+.menu-content {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+menu {
+    list-style: none;
+    padding: 0px;
+}
+
+header {
+    padding: 5px;
+}
+
+.content {
+    padding: 5px;
+    background: #55A5AF;
+    border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 0px;
+    }
+
+    .section-menu {
+        display: none;
+    }
+
+    .main {
+        margin: 0px;
+    }
+}

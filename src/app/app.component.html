@@ -1,0 +1,48 @@
+<div class="container">
+  <section class='section-menu'>
+    <div class="menu-content">
+      <menu>
+        <li>
+          <a href="#section-about">About</a>
+        </li>
+        <li>
+          <a href="#section-team">Team</a>
+        </li>
+        <li>
+          <a href="#section-skills">Skills</a>
+        </li>
+        <li>
+          <a href="#section-passions">Passions</a>
+        </li>
+        <li>
+          <a href="#section-website">Website</a>
+        </li>
+      </menu>
+    </div>
+  </section>
+
+  <div class="main">
+    <header>
+      <h1>Site of Timo Hoff</h1>
+      <app-note>Note: this website is a work in progress.</app-note>
+    </header>
+
+    <div class="content">
+      <section id="section-about">
+        <h2>About</h2>
+
+        <app-note>Note: whenever I visit a website, the first article I look for is the about article. Because
+          what is this website even about?</app-note>
+
+        <p>Welcome to my website! Here I give a short and compact impression of myself.</p>
+      </section>
+
+      <app-team></app-team>
+      <app-skills></app-skills>
+      <app-passions></app-passions>
+      <app-website></app-website>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,20 @@
+:host {
+    width: 240px;
+    text-align: center;
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: 15% 0;
+  display: block;
+  margin: 5px auto;
+}
+
+@media (max-width: 500px) {
+  :host {
+    width: 175px;
+  }
+}
