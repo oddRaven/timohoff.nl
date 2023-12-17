@@ -37,3 +37,9 @@ a:hover {
 .background-yellow {
     background: #FFF03A;
 }
+
+@media (max-width: 500px) {
+    body {
+        margin: 0px;
+    }
+}

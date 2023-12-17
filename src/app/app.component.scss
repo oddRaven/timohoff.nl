@@ -8,27 +8,6 @@
     margin-right: 100px;
 }
 
-.section-menu {
-    width: 100px;
-    height: 100%;
-    float: right;
-}
-
-.menu-content {
-    width: 100px;
-    height: 100%;
-    position: fixed;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-menu {
-    list-style: none;
-    padding: 0px;
-}
-
 header {
     padding: 5px;
 }
@@ -46,14 +25,6 @@ footer {
 }
 
 @media (max-width: 500px) {
-    body {
-        margin: 0px;
-    }
-
-    .section-menu {
-        display: none;
-    }
-
     .main {
         margin: 0px;
     }

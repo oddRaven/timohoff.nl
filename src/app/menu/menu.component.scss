@@ -1,0 +1,27 @@
+:host {
+    width: 100px;
+    height: 100%;
+    float: right;
+}
+
+.menu-content {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+menu {
+    list-style: none;
+    padding: 0px;
+}
+
+
+@media (max-width: 500px) {
+    :host {
+        display: none;
+    }
+}
