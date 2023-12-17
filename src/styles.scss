@@ -1,5 +1,39 @@
 body {
-    margin: 10px 0px;
+    margin: 0px;
     padding: 0px;
     background: #fff0db;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 5px 0px;
+}
+
+div, p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #08a045;
+}
+
+a:hover {
+    color: #0b6e4f
+}
+
+.background-red {
+    background: #FF5733;
+}
+
+.background-orange {
+    background: #F8BB3D;
+}
+
+.background-yellow {
+    background: #FFF03A;
 }

@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    margin-top: 10px;
+}
+
+table {
+    margin: 0px auto;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid #000;
+    padding: 1px 2px;
+}
+
+.display-none {
+    display: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
