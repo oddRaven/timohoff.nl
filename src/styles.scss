@@ -4,11 +4,15 @@ body {
     background: #fff0db;
 }
 
-h1 {
+header {
+    display: block;
+    position: relative;
     text-align: center;
 }
 
 h1, h2, h3 {
+    display: inline-block;
+    position: relative;
     margin: 5px 0px;
 }
 
@@ -24,6 +28,24 @@ a {
 
 a:hover {
     color: #0b6e4f
+}
+
+.note-lightbulb {
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    cursor: pointer;
+}
+
+.note-container {
+    width: 100%;
+
+    .note {
+        background: #FFF03A;
+        text-align: left;
+        padding: 1px;
+        margin: 0px;
+    }
 }
 
 .background-red {

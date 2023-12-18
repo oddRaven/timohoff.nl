@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { CollapsibleTableComponent } from '../collapsible-table/collapsible-table.component';
-import { Item } from '../collapsible-table/item';
 import { Table } from '../collapsible-table/table';
 
 @Component({

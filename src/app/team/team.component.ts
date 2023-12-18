@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
-import { Profile } from '../profile';
+import { Profile } from '../profile/profile';
 import { ProfilesComponent } from '../profiles/profiles.component';
-import { NoteComponent } from '../note/note.component';
+import { NoteDirective } from '../note/note.directive';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [NoteComponent, ProfilesComponent],
+  imports: [ProfilesComponent, NoteDirective],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })

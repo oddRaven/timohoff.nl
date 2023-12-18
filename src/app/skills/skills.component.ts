@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 
-import { NoteComponent } from '../note/note.component'
 import { CollapsibleTableComponent } from '../collapsible-table/collapsible-table.component'
-import { Item } from '../collapsible-table/item'
+import { NoteDirective } from '../note/note.directive'
 import { Table } from '../collapsible-table/table'
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [ CollapsibleTableComponent, NoteComponent ],
+  imports: [ CollapsibleTableComponent, NoteDirective ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { ProfileComponent } from '../profile/profile.component'
-import { Profile } from '../profile'
+import { Profile } from '../profile/profile'
 
 @Component({
   selector: 'app-profiles',

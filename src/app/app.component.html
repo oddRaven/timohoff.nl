@@ -3,20 +3,11 @@
 
   <div class="main">
     <header>
-      <h1>Timo Hoff</h1>
-      <app-note>Note: this website is a work in progress.</app-note>
+      <h1 appNote [text]="'This website is a work in progress.'">Timo Hoff</h1>
     </header>
 
     <div class="content">
-      <section id="section-about">
-        <h2>About</h2>
-
-        <app-note>Note: whenever I visit a website, the first article I look for is the about article. Because
-          what is this website even about?</app-note>
-
-        <p>Welcome to my website! Here I give a short and compact impression of myself.</p>
-      </section>
-
+      <app-about></app-about>
       <app-team></app-team>
       <app-skills></app-skills>
       <app-passions></app-passions>
