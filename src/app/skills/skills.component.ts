@@ -78,7 +78,7 @@ export class SkillsComponent {
       },
       {
         class: '',
-        cells: ['Frameworks', 'Known'],
+        cells: ['Frameworks', 'Active'],
         isHidden: false,
         subItems: [
           {
@@ -112,7 +112,200 @@ export class SkillsComponent {
             isHidden: true
           }
         ]
-      }
+      },
+      {
+        class: '',
+        cells: ['Package Managers', 'Active'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['npm', 'Active'],
+            isHidden: true,
+            subItems: []
+          },
+          {
+            class: '',
+            cells: ['apt', 'Active'],
+            isHidden: true,
+            subItems: []
+          },
+          {
+            class: '',
+            cells: ['brew', 'Active'],
+            isHidden: true,
+            subItems: []
+          },
+          {
+            class: '',
+            cells: ['cordova', 'Active'],
+            isHidden: true,
+            subItems: []
+          },
+        ]
+      },
+      {
+        class: '',
+        cells: ['Web Tech', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Sass', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['ReactiveX', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
+        cells: ['Web Servers', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Apache2', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['IIS', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
+        cells: ['Editors', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Vim', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Visual Studio', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Visual Studio Code', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Xcode', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Android Studio', 'Active'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
+        cells: ['Operating Systems', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Windows', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Ubuntu', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['MacOS', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Android', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['iOS', 'Active'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
+        cells: ['Command Languages', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Bash', 'Known'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Powershell', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
+        cells: ['Practice', 'Active'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Scrum', 'Known'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['UI/UX', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Test Coverage', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Regex', 'Active'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
     ]
   };
 }
