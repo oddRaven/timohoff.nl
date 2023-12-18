@@ -15,35 +15,43 @@ export class PassionsComponent {
   profiles : Profile[] = [
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Swimming'
+      name: 'Swimming',
+      emoji: '🏊‍♂️'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Painting'
+      name: 'Painting',
+      emoji: '🎨'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Lego Design'
+      name: 'Lego Design',
+      emoji: '👷‍♂️'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Geopolitics'
+      name: 'Geopolitics',
+      emoji: '🌍'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'History'
+      name: 'History',
+      emoji: '📜'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Game Engines'
+      name: 'Game Engines',
+      emoji: '💻‍'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Drinks'
+      name: 'Drinks',
+      emoji: '🍻'
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
-      name: 'Mario Kart'
+      name: 'Mario Kart',
+      emoji: '🏎️'
     }
   ];
 }

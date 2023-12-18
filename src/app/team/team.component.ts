@@ -15,15 +15,18 @@ export class TeamComponent {
   profiles : Profile[] = [
     {
       imageUrl: 'http://file.timohoff.nl/mozes.jpg',
-      name: 'Mozes'
+      name: 'Mozes',
+      emoji: ''
     },
     {
       imageUrl: 'http://file.timohoff.nl/timo.jpg',
-      name: 'Timo'
+      name: 'Timo',
+      emoji: ''
     },
     {
       imageUrl: 'http://file.timohoff.nl/aiko.jpg',
-      name: 'Aiko'
+      name: 'Aiko',
+      emoji: ''
     }
   ];
 }

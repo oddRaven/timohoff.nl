@@ -3,14 +3,24 @@
     text-align: center;
 }
 
-.img-profile {
+.profile {
   border-radius: 50%;
   width: 150px;
   height: 150px;
   object-fit: cover;
   object-position: 15% 0;
-  display: block;
+  display: flex;
   margin: 5px auto;
+  background: #005687;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .emoji {
+    font-size: 100px;
+    height: 100px;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 500px) {
