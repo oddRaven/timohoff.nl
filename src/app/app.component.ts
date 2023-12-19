@@ -8,12 +8,13 @@ import { TeamComponent } from './team/team.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PassionsComponent } from './passions/passions.component';
 import { WebsiteComponent } from './website/website.component';
+import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { NoteDirective } from './note/note.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MenuComponent, AboutComponent, TeamComponent, SkillsComponent, PassionsComponent, WebsiteComponent, NoteDirective],
+  imports: [CommonModule, RouterOutlet, MenuComponent, AboutComponent, TeamComponent, SkillsComponent, PassionsComponent, WebsiteComponent, LanguageSelectorComponent, NoteDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
