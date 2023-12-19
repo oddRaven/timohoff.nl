@@ -13,10 +13,21 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "nl": {
+            "translation": "src/locale/messages.nl.xlf"
+          },
+          "en": {
+            "translation": "src/locale/messages.en.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
             "outputPath": "dist/timohoff.nl",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -40,6 +51,14 @@
             }
           },
           "configurations": {
+            "nl": {
+              "localize": ["nl"],
+              "baseHref": "/"
+            },
+            "en": {
+              "localize": ["en"],
+              "baseHref": "/en"
+            },
             "production": {
               "budgets": [
                 {
@@ -71,6 +90,12 @@
             },
             "development": {
               "buildTarget": "timohoff.nl:build:development"
+            },
+            "nl": {
+              "buildTarget": "timohoff.nl:build:development,nl"
+            },
+            "en": {
+              "buildTarget": "timohoff.nl:build:development,en"
             }
           },
           "defaultConfiguration": "development"

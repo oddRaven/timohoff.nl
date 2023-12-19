@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="nl-NL" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about" datatype="html">
+        <source>Over</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills" datatype="html">
+        <source>Vaardigheden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passions" datatype="html">
+        <source>Passies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="team" datatype="html">
+        <source>Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/team.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="website" datatype="html">
+        <source>Website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/team.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="aboutParagraph" datatype="html">
+        <source>Welkom op mijn website! Hier geef ik een kort en compacte impressie van mijzelf.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="requirementsParagraph" datatype="html">
+        <source>Als onderdeel van de creatie van de website, requirments waren opgesteld gebruikmakend van de MoSCoW stijl.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/team.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="teamParagraph" datatype="html">
+        <source>Ontmoet het team!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/team.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="websiteParagraph" datatype="html">
+        <source>Deze website is gemaakt volgens een plan.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/team/team.component.html</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
