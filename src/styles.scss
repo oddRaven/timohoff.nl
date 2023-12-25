@@ -56,6 +56,20 @@ a:hover {
     }
 }
 
+app-profiles {
+  .description {
+    width: 100%;
+    padding: 2px;
+    background: #fafafa;
+    margin: 5px 0px;
+
+    p {
+      margin: 2px;
+      padding: 0px;
+    }
+  }
+}
+
 .background-red {
     background: #FF5733;
 }

@@ -15,6 +15,12 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &.active {
+    border: 3px solid #F8BB3D;
+  }
 
   .emoji {
     font-size: 100px;

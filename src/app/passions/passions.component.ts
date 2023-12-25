@@ -16,42 +16,50 @@ export class PassionsComponent {
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Swimming',
-      emoji: '🏊‍♂️'
+      emoji: '🏊‍♂️',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Painting',
-      emoji: '🎨'
+      emoji: '🎨',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Lego Design',
-      emoji: '👷‍♂️'
+      emoji: '👷‍♂️',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Geopolitics',
-      emoji: '🌍'
+      emoji: '🌍',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'History',
-      emoji: '📜'
+      emoji: '📜',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Game Engines',
-      emoji: '💻‍'
+      emoji: '💻‍',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Drinks',
-      emoji: '🍻'
+      emoji: '🍻',
+      descriptions: {}
     },
     {
       imageUrl: '/assets/placeholder-square.jpg',
       name: 'Mario Kart',
-      emoji: '🏎️'
+      emoji: '🏎️',
+      descriptions: {}
     }
   ];
 }

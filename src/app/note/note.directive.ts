@@ -28,7 +28,9 @@ export class NoteDirective implements OnInit {
   }
 
   clickNote () {
-    this.document.querySelectorAll('.note').forEach(e => e.remove());
+    this.document
+      .querySelectorAll('.note')
+      .forEach(e => e.remove());
 
     let paragraph = this.document.createElement("p");
     paragraph.textContent = "Note: " + this.text;
