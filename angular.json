@@ -16,10 +16,10 @@
       "i18n": {
         "locales": {
           "nl": {
-            "translation": "src/locale/messages.nl.xlf"
+            "translation": "src/locales/messages.nl.xlf"
           },
           "en": {
-            "translation": "src/locale/messages.en.xlf"
+            "translation": "src/locales/messages.en.xlf"
           }
         }
       },
