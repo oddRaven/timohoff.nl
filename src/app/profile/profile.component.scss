@@ -11,7 +11,7 @@
   object-position: 15% 0;
   display: flex;
   margin: 5px auto;
-  background: #005687;
+  background: #fff8dc;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -19,13 +19,14 @@
   cursor: pointer;
 
   &.active {
-    border: 3px solid #F8BB3D;
+    border: 3px solid #fafafa;
   }
 
   .emoji {
     font-size: 100px;
     height: 100px;
     margin: 0px;
+    line-height: 1.1em;
   }
 }
 

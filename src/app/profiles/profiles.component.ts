@@ -4,6 +4,8 @@ import { DOCUMENT } from '@angular/common';
 import { ProfileComponent } from '../profile/profile.component'
 import { Profile } from '../profile/profile'
 
+const cat = `timoDescription`;
+
 @Component({
   selector: 'app-profiles',
   standalone: true,
@@ -13,11 +15,6 @@ import { Profile } from '../profile/profile'
 })
 export class ProfilesComponent {
   @Input() profiles!: Profile[];
-
-  defaultDescriptions: Record<string, string> = {
-    'en': 'No description.',
-    'nl': 'Geen beschrijving.',
-  };
 
   constructor(
     @Inject(LOCALE_ID) public locale: string,
@@ -30,31 +27,29 @@ export class ProfilesComponent {
       .querySelectorAll('app-profiles .description')
       .forEach(e => e.remove());
 
+    if (event.target == null) {
+      return;
+    }
+
+    let targetElement = event.target as HTMLElement;
+    let profileElement = targetElement.closest('app-profile');
+    let imageElement = profileElement?.querySelector('.profile');
+    let isDeactivating = imageElement?.classList.contains('active');
+
     this.document
       .querySelectorAll('app-profiles .active')
       .forEach(e => e.classList.remove('active'));
 
-    if (event.target == null) {
+    if (isDeactivating) {
       return;
     }
 
     let descriptionElement = this.document.createElement("div");
     descriptionElement.classList.add('description');
-    descriptionElement.innerHTML = this.getDescription(profile);
+    descriptionElement.innerHTML = profile.description;
 
-    let targetElement = event.target as HTMLElement;
-    let profileElement = targetElement.closest('app-profile');
     profileElement?.after(descriptionElement);
 
-    let imageElement = profileElement?.querySelector('.profile');
     imageElement?.classList.add('active');
-  }
-
-  getDescription (profile: Profile) {
-    if (this.locale in profile.descriptions) {
-      return profile.descriptions[this.locale];
-    }
-
-    return this.defaultDescriptions[this.locale];
   }
 }
