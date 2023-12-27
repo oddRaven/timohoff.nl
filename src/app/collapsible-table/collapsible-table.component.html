@@ -1,32 +1,34 @@
-<table>
-    <thead>
-        <tr>
-            <th></th>
+@if (table != null) {
+    <table>
+        <thead>
+            <tr>
+                <th></th>
 
-            @for (column of table.header; track $index) {
-                <th>{{ column }}</th>
-            }
-        </tr>
-    </thead>
-    <tbody>
-        @for (item of flatItems; track $index) {
-            <tr [ngClass]="[item.class, item.isHidden ? 'display-none': '']">
-                <td *ngIf="item.subItems.length != 0; else noCollapse" class='cursor-pointer' (click)="itemClick(item)">
-                    @if (item.subItems[0].isHidden) {
-                        &nbsp;&#9660;&nbsp;
-                    }
-                    @else {
-                        &nbsp;&#9654;&nbsp;
-                    }
-                </td>
-                <ng-template #noCollapse>
-                    <td class="cursor-default">&nbsp;&nbsp;&nbsp;</td>
-                </ng-template>
-
-                @for (cell of item.cells; track $index) {
-                    <td>{{ cell }}</td>
+                @for (column of table.header; track $index) {
+                    <th>{{ column }}</th>
                 }
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @for (item of flatItems; track $index) {
+                <tr [ngClass]="[item.class, item.isHidden ? 'display-none': '']">
+                    <td *ngIf="item.subItems.length != 0; else noCollapse" class='cursor-pointer' (click)="itemClick(item)">
+                        @if (item.subItems[0].isHidden) {
+                            &nbsp;&#9660;&nbsp;
+                        }
+                        @else {
+                            &nbsp;&#9654;&nbsp;
+                        }
+                    </td>
+                    <ng-template #noCollapse>
+                        <td class="cursor-default">&nbsp;&nbsp;&nbsp;</td>
+                    </ng-template>
+
+                    @for (cell of item.cells; track $index) {
+                        <td>{{ cell }}</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

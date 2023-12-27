@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 
 import { ProfileComponent } from '../profile/profile.component'
 import { Profile } from '../profile/profile'
+import { ElementService } from '../element/element.service'
 
 const cat = `timoDescription`;
 
@@ -18,11 +19,12 @@ export class ProfilesComponent {
 
   constructor(
     @Inject(LOCALE_ID) public locale: string,
-    @Inject(DOCUMENT) private document: Document)
+    @Inject(DOCUMENT) private document: Document,
+    private elementService: ElementService)
   {
   }
 
-  clickProfile (event: Event, profile: Profile) {
+  selectProfile (event: Event, profile: Profile) {
     this.document
       .querySelectorAll('app-profiles .description')
       .forEach(e => e.remove());
@@ -32,9 +34,8 @@ export class ProfilesComponent {
     }
 
     let targetElement = event.target as HTMLElement;
-    let profileElement = targetElement.closest('app-profile');
-    let imageElement = profileElement?.querySelector('.profile');
-    let isDeactivating = imageElement?.classList.contains('active');
+    let profileElement = targetElement.closest('app-profile') as Element;
+    let isDeactivating = profileElement?.classList.contains('active');
 
     this.document
       .querySelectorAll('app-profiles .active')
@@ -44,12 +45,10 @@ export class ProfilesComponent {
       return;
     }
 
-    let descriptionElement = this.document.createElement("div");
-    descriptionElement.classList.add('description');
-    descriptionElement.innerHTML = profile.description;
+    let descriptionElement = this.elementService.createDiv('description', profile.description);
+    let lastProfileElement = this.elementService.getLastFromRow(profileElement);
+    lastProfileElement?.after(descriptionElement);
 
-    profileElement?.after(descriptionElement);
-
-    imageElement?.classList.add('active');
+    profileElement?.classList.add('active');
   }
 }

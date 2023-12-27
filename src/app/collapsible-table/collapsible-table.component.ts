@@ -16,6 +16,10 @@ export class CollapsibleTableComponent implements OnInit {
   flatItems: Item[] = [];
 
   ngOnInit() {
+    if(this.table == null){
+      return;
+    }
+
     this.flattenItems(this.table.items);
   }
 

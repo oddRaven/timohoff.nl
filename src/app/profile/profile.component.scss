@@ -1,34 +1,35 @@
 :host {
-    width: 240px;
-    text-align: center;
-}
+  width: 240px;
+  text-align: center;
 
-.profile {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  object-position: 15% 0;
-  display: flex;
-  margin: 5px auto;
-  background: #fff8dc;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  &.active {
+  &.active .profile {
     border: 3px solid #fafafa;
   }
 
-  .emoji {
-    font-size: 100px;
-    height: 100px;
-    margin: 0px;
-    line-height: 1.1em;
+  .profile {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 15% 0;
+    display: flex;
+    margin: 5px auto;
+    background: #bec1ba;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    .emoji {
+      font-size: 100px;
+      height: 100px;
+      margin: 0px;
+      line-height: 1.1em;
+    }
   }
 }
+
 
 @media (max-width: 500px) {
   :host {

@@ -1,9 +1,11 @@
-@if(profile.emoji != null && profile.emoji != ''){
-    <div class='profile'>
-        <p class="emoji">{{ profile.emoji }}️</p>
-    </div>
+@if (profile != null) {
+    @if (profile.emoji != null && profile.emoji != '') {
+        <div class='profile'>
+            <p class="emoji">{{ profile.emoji }}️</p>
+        </div>
+    }
+    @else {
+        <img [src]="profile.imageUrl" class='profile' />
+    }
+    <span>{{ profile.name }}</span>
 }
-@else {
-    <img [src]="profile.imageUrl" class='profile' />
-}
-<span>{{ profile.name }}</span>
