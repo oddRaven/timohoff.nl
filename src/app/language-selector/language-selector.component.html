@@ -1,2 +1,13 @@
-<div [ngClass]="{'active': isEnglish}" (click)="navigateToEnglish()">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-<div [ngClass]="{'active': isDutch}" (click)="navigateToDutch()">🇳🇱</div>
+<div class='box' [ngClass]="{'active': isEnglish}" (click)="navigateToEnglish()">
+    <div class="flag flag-white">
+        <div class="flag-cross-horizontal"></div>
+        <div class="flag-cross-vertical"></div>
+    </div>
+</div>
+<div class='box' [ngClass]="{'active': isDutch}" (click)="navigateToDutch()">
+    <div class="flag">
+        <div class="flag-row flag-row-red"></div>
+        <div class="flag-row flag-row-white"></div>
+        <div class="flag-row flag-row-blue"></div>
+    </div>
+</div>

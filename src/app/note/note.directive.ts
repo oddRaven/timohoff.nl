@@ -6,7 +6,7 @@ import { Directive, ElementRef, OnInit, Inject, Input, PLATFORM_ID } from '@angu
   standalone: true,
 })
 export class NoteDirective implements OnInit {
-  @Input() text = '';
+  @Input() noteText = '';
 
   constructor(
     private elementRef: ElementRef, 
@@ -33,7 +33,7 @@ export class NoteDirective implements OnInit {
       .forEach(e => e.remove());
 
     let paragraph = this.document.createElement("p");
-    paragraph.textContent = "Note: " + this.text;
+    paragraph.textContent = "Note: " + this.noteText;
     paragraph.classList.add('note');
 
     let textElement = this.document.createElement("div");
