@@ -21,11 +21,25 @@ describe('ElementService', () => {
     expect(element.innerHTML).toBe('this is test');
   });
 
-  it('should get last from row', () => {
-    let rowElement = {
+  it('should return the last element from the row', () => {
+    // Arrange
+    const parent = document.createElement('div');
+    const child1 = document.createElement('div');
+    const child2 = document.createElement('div');
+    const child3 = document.createElement('div');
 
-    } as Element;
+    parent.appendChild(child1);
+    parent.appendChild(child2);
+    parent.appendChild(child3);
 
-    let element = service.getLastFromRow(rowElement);
+    spyOn(child1, 'getBoundingClientRect').and.returnValue({ top: 100 } as DOMRect);
+    spyOn(child2, 'getBoundingClientRect').and.returnValue({ top: 100 } as DOMRect);
+    spyOn(child3, 'getBoundingClientRect').and.returnValue({ top: 90 } as DOMRect);
+
+    // Act
+    const result = service.getLastFromRow(child1);
+
+    // Assert
+    expect(result).toBe(child2);
   });
 });

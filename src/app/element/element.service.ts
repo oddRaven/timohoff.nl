@@ -1,8 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import { Profile } from '../profile/profile';
-
 @Injectable({
   providedIn: 'root'
 })
