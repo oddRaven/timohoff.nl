@@ -43,7 +43,8 @@ export class NoteDirective implements OnInit {
     }
 
     let paragraph = this.document.createElement("p");
-    paragraph.textContent = "Note: " + this.noteText;
+    let noteLabel = $localize`:@@note:note`;
+    paragraph.textContent = noteLabel + ": " + this.noteText;
     paragraph.classList.add('note');
 
     let containerElement = this.document.createElement("div");

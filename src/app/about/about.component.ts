@@ -10,5 +10,5 @@ import { NoteDirective } from '../note/note.directive'
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
+  aboutNote = $localize`:@@aboutNote:about`
 }

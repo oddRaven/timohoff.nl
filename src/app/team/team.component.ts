@@ -12,6 +12,8 @@ import { NoteDirective } from '../note/note.directive';
   styleUrl: './team.component.scss'
 })
 export class TeamComponent {
+  teamNote = $localize`:@@teamNote:team`
+
   profiles : Profile[] = [
     {
       imageUrl: 'http://file.timohoff.nl/mozes.jpg',

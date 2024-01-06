@@ -11,5 +11,6 @@ import { NoteDirective } from '../note/note.directive';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  wipNote = $localize`:@@wipNote:wip`
+  flagsNote = $localize`:@@flagsNote:flags`
 }

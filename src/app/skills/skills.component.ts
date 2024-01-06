@@ -12,6 +12,8 @@ import { Table } from '../collapsible-table/table'
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  skillsNote = $localize`:@@skillsNote:skills`;
+
   table : Table = {
     header: ['Skill', 'State'],
     items: [
