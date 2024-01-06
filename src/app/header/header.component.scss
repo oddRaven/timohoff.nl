@@ -1,5 +1,11 @@
-app-language-selector {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+app-language-selector{
+    margin: 0px auto;
+    position: relative;
+    padding: 5px 0px;
+}
+
+@media (max-width: 500px) {
+    app-language-selector{
+        position: absolute;
+    }
 }

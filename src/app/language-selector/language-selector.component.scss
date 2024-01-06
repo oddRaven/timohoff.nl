@@ -20,6 +20,7 @@
             width: 22px;
             height: 18px;
             position: relative;
+            border: 1px solid black;
 
             &.flag-white {
                 background: white;
@@ -45,7 +46,7 @@
 
             .flag-row {
                 width: 100%;
-                height: 30%;
+                height: 33.3%;
 
                 &.flag-row-red {
                     background: red;
