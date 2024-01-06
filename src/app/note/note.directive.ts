@@ -29,17 +29,52 @@ export class NoteDirective implements OnInit {
 
   clickNote () {
     this.document
-      .querySelectorAll('.note')
+      .querySelectorAll('.note-container')
       .forEach(e => e.remove());
+
+    let isDeactivating = this.elementRef.nativeElement.classList.contains('active-note');
+
+    this.document
+      .querySelectorAll('[appnote]')
+      .forEach(e => e.classList.remove('active-note'));
+
+    if (isDeactivating) {
+      return;
+    }
 
     let paragraph = this.document.createElement("p");
     paragraph.textContent = "Note: " + this.noteText;
     paragraph.classList.add('note');
 
-    let textElement = this.document.createElement("div");
-    textElement.classList.add('note-container');
+    let containerElement = this.document.createElement("div");
+    containerElement.classList.add('note-container');
+    this.positionElement(containerElement);
+    containerElement.append(paragraph);
 
-    textElement.append(paragraph);
-    this.elementRef.nativeElement.after(textElement);
+    this.elementRef.nativeElement.after(containerElement);
+    this.elementRef.nativeElement.classList.add('active-note');
+  }
+
+  positionElement(containerElement : HTMLDivElement) {
+    let isPositionAbsolute = this.isPositionAsbsolute();
+
+    if (isPositionAbsolute) {
+      containerElement.style.position = "absolute";
+
+      let rect = this.elementRef.nativeElement.getBoundingClientRect();
+      containerElement.style.top = rect.bottom + 'px';
+    }
+  }
+
+  isPositionAsbsolute() {
+    const nativeElement = this.elementRef.nativeElement;
+
+    // Use Renderer2 to get the computed style
+    const computedStyle = window.getComputedStyle(nativeElement);
+
+    // Get the computed position property
+    const position = computedStyle.getPropertyValue('position');
+
+    return position == 'absolute';
   }
 }
