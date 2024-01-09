@@ -6,11 +6,21 @@
 
   <div class="main">
     <div>
-      <app-about id="about" class="content" appScrollActive selector=".scroll-active-about" [offset]="offset"></app-about>
-      <app-team id="team" class="content" appScrollActive selector=".scroll-active-team" [offset]="offset"></app-team>
-      <app-skills id="skills" class="content" appScrollActive selector=".scroll-active-skills" [offset]="offset"></app-skills>
-      <app-passions id="passions" class="content" appScrollActive selector=".scroll-active-passions" [offset]="offset"></app-passions>
-      <app-website id="website" class="content" appScrollActive selector=".scroll-active-website" [offset]="offset"></app-website>
+      <div class="content-container" appScrollActive selector=".scroll-active-about" [offset]="offset">
+        <app-about id="about" class="content"></app-about>
+      </div>
+      <div class="content-container" appScrollActive selector=".scroll-active-team" [offset]="offset">
+        <app-team id="team" class="content"></app-team>
+      </div>
+      <div class="content-container" appScrollActive selector=".scroll-active-skills" [offset]="offset">
+        <app-skills id="skills" class="content"></app-skills>
+      </div>
+      <div class="content-container" appScrollActive selector=".scroll-active-passions" [offset]="offset">
+        <app-passions id="passions" class="content"></app-passions>
+      </div>
+      <div class="content-container" appScrollActive selector=".scroll-active-website" [offset]="offset">
+        <app-website id="website" class="content"></app-website>
+      </div>
     </div>
   </div>
 

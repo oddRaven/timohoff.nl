@@ -25,24 +25,27 @@ footer {
     padding: 5px 0px;
 }
 
-.content {
-    padding: 5px;
-    background: #54c0ff;
-    border-radius: 2px;
-    display: block;
-    margin: 5px 0px;
+.content-container {
+    padding: 2px 0px;
 
-    &.active {
-        background: #29b0ff;
+    .content {
+        padding: 5px;
+        background: #54c0ff;
+        border-radius: 2px;
+        display: block;
+
+        &.active {
+            background: #29b0ff;
+        }
     }
 }
 
-.content:first-child {
-    margin-top: 0px;
+.content-container:first-child {
+    padding-top: 4px;
 }
 
-.content:last-child {
-    margin-bottom: 0px;
+.content-container:last-child {
+    padding-bottom: 4px;
 }
 
 @media (max-width: 500px) {

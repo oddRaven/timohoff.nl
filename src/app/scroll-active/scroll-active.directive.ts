@@ -27,7 +27,7 @@ export class ScrollActiveDirective implements OnInit {
     }
 
     let rect : DOMRect = this.elementRef.nativeElement.getBoundingClientRect();
-    let isActive = rect.top <= this.offset && rect.bottom >= this.offset;
+    let isActive = rect.top <= this.offset && rect.bottom > this.offset;
     let elements = this.document.querySelectorAll(this.selector);
 
     if (isActive) {
