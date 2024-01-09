@@ -1,3 +1,7 @@
+<app-pop-up (click)="closePopUp()">
+  <app-menu></app-menu>
+</app-pop-up>
+
 <div class="container">
   <div class="extra-container">
     <div class="extra">
@@ -7,6 +11,8 @@
   </div>
 
   <div class="main">
+    <div class="mobile-header-spacing"></div>
+
     <div>
       <div class="content-container" appScrollActive selector=".scroll-active-about" [offset]="offset">
         <app-about id="about" class="content"></app-about>

@@ -1,3 +1,31 @@
+app-pop-up {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    app-menu {
+        background: #faf0e6;
+        border: 1px solid black;
+    }
+
+    &.active {
+        display: flex;
+
+        app-menu {
+            display: block;
+        }
+    }
+}
+
+.mobile-header-spacing {
+    display: none;
+    height: 40px;
+}
+
 .extra-container {
     width: 120px;
     height: 100%;
@@ -65,7 +93,11 @@ footer {
 
 @media (max-width: 500px) {
     .main {
-        margin: 40px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    .mobile-header-spacing {
+        display: block;
     }
 
     .extra-container .extra {

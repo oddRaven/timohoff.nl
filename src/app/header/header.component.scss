@@ -6,6 +6,7 @@ app-language-selector{
 
 .mobile-headings {
     display: none;
+    cursor: pointer;
 
     .mobile-heading {
         display: none;
@@ -15,6 +16,11 @@ app-language-selector{
             display: block;
         }
     }
+}
+
+.h1-container a {
+    text-decoration: inherit;
+    color: black;
 }
 
 @media (max-width: 500px) {
