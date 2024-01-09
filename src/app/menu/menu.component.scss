@@ -2,19 +2,15 @@ a.active {
     color: #009efa;
 }
 
-.menu-content {
-    width: 120px;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 menu {
     list-style: none;
     padding: 0px;
     font-size: 20px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 500px) {

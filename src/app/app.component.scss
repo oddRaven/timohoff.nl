@@ -1,7 +1,22 @@
-.extra {
+.extra-container {
     width: 120px;
     height: 100%;
     float: right;
+
+    .extra {
+        position: fixed;
+        width: 120px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        app-menu {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .container {
@@ -33,19 +48,19 @@ footer {
         background: #54c0ff;
         border-radius: 2px;
         display: block;
+    }
 
-        &.active {
-            background: #29b0ff;
-        }
+    &.active .content {
+        background: #29b0ff;
     }
 }
 
 .content-container:first-child {
-    padding-top: 4px;
+    padding-top: 0px;
 }
 
 .content-container:last-child {
-    padding-bottom: 4px;
+    padding-bottom: 0px;
 }
 
 @media (max-width: 500px) {
@@ -53,8 +68,12 @@ footer {
         margin: 40px 0px 0px 0px;
     }
 
-    .extra {
+    .extra-container .extra {
         position: relative;
+
+        app-menu {
+            display: none;
+        }
     }
 
     header {
