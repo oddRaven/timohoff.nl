@@ -31,6 +31,18 @@ footer {
     border-radius: 2px;
     display: block;
     margin: 5px 0px;
+
+    &.active {
+        background: #0090e3;
+    }
+}
+
+.content:first-child {
+    margin-top: 0px;
+}
+
+.content:last-child {
+    margin-bottom: 0px;
 }
 
 @media (max-width: 500px) {
