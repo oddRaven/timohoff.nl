@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { CommonModule, isPlatformServer } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
@@ -18,10 +18,26 @@ import { ScrollActiveDirective } from './scroll-active/scroll-active.directive';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'timohoff.nl';
+  offset: number = 0;
 
-  constructor ()
+  constructor (
+    @Inject(PLATFORM_ID) private platformId: Object)
   {
+  }
+
+  ngOnInit(): void {
+    this.initializeOffset();
+  }
+
+  initializeOffset () {
+    if (isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    if (window.innerWidth <= 500) {
+      this.offset = 40;
+    }
   }
 }

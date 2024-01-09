@@ -4,8 +4,39 @@ app-language-selector{
     padding: 5px 0px;
 }
 
+.mobile-headings {
+    display: none;
+
+    .mobile-heading {
+        display: none;
+        font-size: 20px;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
 @media (max-width: 500px) {
-    app-language-selector{
-        position: absolute;
+    :host {
+        display: flex;
+
+        .h1-container {
+            width: 60px;
+            text-align: left;
+
+            h1 {
+                width: 30px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        .mobile-headings {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

@@ -1,11 +1,12 @@
-import { Directive, ElementRef, Inject, Input, PLATFORM_ID, HostListener } from '@angular/core';
+import { Directive, ElementRef, Inject, Input, PLATFORM_ID, HostListener, OnInit } from '@angular/core';
 import { DOCUMENT, isPlatformServer } from '@angular/common';
 
 @Directive({
   selector: '[appScrollActive]',
   standalone: true
 })
-export class ScrollActiveDirective {
+export class ScrollActiveDirective implements OnInit {
+  @Input() offset: number = 0;
   @Input() selector: string = '';
 
   constructor(
@@ -15,6 +16,10 @@ export class ScrollActiveDirective {
   { 
   } 
 
+  ngOnInit(): void {
+    this.onScroll();
+  }
+
   @HostListener('window:scroll', [])
   onScroll(): void {
     if (isPlatformServer(this.platformId)) {
@@ -22,7 +27,7 @@ export class ScrollActiveDirective {
     }
 
     let rect : DOMRect = this.elementRef.nativeElement.getBoundingClientRect();
-    let isActive = rect.top <= 0 && rect.bottom >= 0;
+    let isActive = rect.top <= this.offset && rect.bottom >= this.offset;
     let elements = this.document.querySelectorAll(this.selector);
 
     if (isActive) {
