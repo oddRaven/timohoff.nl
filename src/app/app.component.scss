@@ -1,3 +1,8 @@
+@import './shared/variables';
+
+$main-width: 1000px;
+$extra-width: 120px;
+
 app-pop-up {
     display: none;
     position: fixed;
@@ -8,7 +13,7 @@ app-pop-up {
     z-index: 10;
 
     app-menu {
-        background: #faf0e6;
+        background: $background-color;
         border: 1px solid black;
     }
 
@@ -27,13 +32,13 @@ app-pop-up {
 }
 
 .extra-container {
-    width: 120px;
+    width: $extra-width;
     height: 100%;
-    float: right;
+    float: left;
 
     .extra {
         position: fixed;
-        width: 120px;
+        width: $extra-width;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -48,18 +53,13 @@ app-pop-up {
 }
 
 .container {
-    max-width: 1120px;
+    max-width: $main-width + $extra-width;
     margin: 0px auto;
     position: relative;
 }
 
 .main {
-    margin-right: 120px;
-}
-
-header {
-    position: relative;
-    background: #faf0e6;
+    margin-left: $extra-width;
 }
 
 footer {
@@ -73,13 +73,13 @@ footer {
 
     .content {
         padding: 5px;
-        background: #54c0ff;
+        background: $foreground-color;
         border-radius: 2px;
         display: block;
     }
 
     &.active .content {
-        background: #29b0ff;
+        background: $foreground-active-color;
     }
 }
 

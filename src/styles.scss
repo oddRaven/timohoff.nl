@@ -1,7 +1,9 @@
+@import 'app/shared/variables';
+
 html, body {
     margin: 0px;
     padding: 0px;
-    background: #faf0e6;
+    background: $background-color;
 }
 
 body.overflow-hidden {
@@ -40,11 +42,11 @@ div, p{
 
 a {
     text-decoration: none;
-    color: #54c0ff;
+    color: $foreground-color;
 }
 
 a:hover {
-    color: #009efa
+    color: $foreground-active-color;
 }
 
 .note-lightbulb {
@@ -69,7 +71,7 @@ app-profiles {
   .description {
     width: 100%;
     padding: 2px;
-    background: #fafafa;
+    background: $background-color;
     margin: 5px 0px;
 
     p {

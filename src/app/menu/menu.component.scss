@@ -1,5 +1,7 @@
+@import '../shared/variables';
+
 a.active {
-    color: #009efa;
+    color: $foreground-active-color;
 }
 
 menu {

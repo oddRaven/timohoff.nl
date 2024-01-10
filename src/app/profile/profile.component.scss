@@ -1,3 +1,5 @@
+@import '../shared/variables';
+
 :host {
   width: 240px;
   text-align: center;
@@ -14,7 +16,7 @@
     object-position: 15% 0;
     display: flex;
     margin: 5px auto;
-    background: #faf0e6;
+    background: $background-color;
     justify-content: center;
     align-items: center;
     overflow: hidden;

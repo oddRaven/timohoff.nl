@@ -1,5 +1,13 @@
+@import '../shared/variables';
+
+:host {
+    position: relative;
+    background: $background-color;
+    padding: 0px 5px;
+    text-align: left;
+}
+
 app-language-selector{
-    margin: 0px auto;
     position: relative;
     padding: 5px 0px;
 }
