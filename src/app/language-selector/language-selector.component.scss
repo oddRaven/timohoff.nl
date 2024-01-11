@@ -1,3 +1,5 @@
+@import '../shared/variables';
+
 :host {
     display: flex;
     width: 80px;
@@ -13,7 +15,7 @@
         position: relative;
 
         &.active {
-            background: #00a2ff;
+            background: $foreground-active-color;
         }
 
         .flag {

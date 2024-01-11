@@ -29,6 +29,10 @@ app-language-selector{
 .h1-container a {
     text-decoration: inherit;
     color: black;
+
+    span {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 500px) {

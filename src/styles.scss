@@ -1,4 +1,4 @@
-@import 'app/shared/variables';
+@import './app/shared/variables';
 
 html, body {
     margin: 0px;
@@ -42,11 +42,11 @@ div, p{
 
 a {
     text-decoration: none;
-    color: $foreground-color;
+    color: $important-passive-color;
 }
 
 a:hover {
-    color: $foreground-active-color;
+    color: $important-active-color;
 }
 
 .note-lightbulb {
@@ -71,7 +71,7 @@ app-profiles {
   .description {
     width: 100%;
     padding: 2px;
-    background: $background-color;
+    border: 1px solid black;
     margin: 5px 0px;
 
     p {
@@ -91,6 +91,14 @@ app-profiles {
 
 .background-yellow {
     background: #FFF03A;
+}
+
+.important-active-color {
+    color: $important-active-color;
+}
+
+.important-passive-color {
+    color: $important-passive-color;
 }
 
 @media (max-width: 500px) {
