@@ -58,13 +58,19 @@ export class RequirementsComponent {
         subItems: [
           {
             class: 'background-yellow',
-            cells: ['3.1', 'The website could support multiple languages.', ''],
+            cells: ['3.1', 'The website could support multiple languages.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
             class: 'background-orange',
-            cells: ['3.2', 'The website should support text-to-speech aids.', ''],
+            cells: ['3.2', 'The website should support screen readers.', ''],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: 'background-orange',
+            cells: ['3.3', 'The website should support keyboard navigation.', '\u2713'],
             subItems: [],
             isHidden: true
           }
@@ -86,7 +92,7 @@ export class RequirementsComponent {
       },
       {
         class: 'background-red',
-        cells: ['5', 'The website content must be complete.', '\u2713'],
+        cells: ['5', 'The website content must be complete.', ''],
         subItems: [
           {
             class: 'background-red',
@@ -158,7 +164,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['6.2', 'The website repository must not be responsible for tracking sensitive personal information.', ''],
+            cells: ['6.2', 'The website repository must not be responsible for tracking sensitive personal information.', '\u2713'],
             subItems: [],
             isHidden: true
           },

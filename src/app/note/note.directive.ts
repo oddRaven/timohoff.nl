@@ -21,9 +21,11 @@ export class NoteDirective implements OnInit {
     }
 
     let divElement = this.document.createElement("div");
+    divElement.setAttribute('tabindex', '0');
     divElement.textContent = "💡";
     divElement.classList.add('note-lightbulb');
     divElement.addEventListener('click', (e) => this.clickNote());
+    divElement.addEventListener('keypress', (e) => e.key == 'Enter' && this.clickNote());
     this.elementRef.nativeElement.appendChild(divElement);
   }
 

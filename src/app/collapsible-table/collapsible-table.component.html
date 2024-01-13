@@ -12,7 +12,7 @@
         <tbody>
             @for (item of flatItems; track $index) {
                 <tr [ngClass]="[item.class, item.isHidden ? 'display-none': '']">
-                    <td *ngIf="item.subItems.length != 0; else noCollapse" class='cursor-pointer' (click)="itemClick(item)">
+                    <td *ngIf="item.subItems.length != 0; else noCollapse" class='cursor-pointer' (click)="itemClick(item)" (keydown.enter)="itemClick(item)" tabindex="0">
                         @if (item.subItems[0].isHidden) {
                             &nbsp;&#9660;&nbsp;
                         }
