@@ -12,6 +12,7 @@ import { PassionsComponent } from './passions/passions.component';
 import { WebsiteComponent } from './website/website.component';
 import { ContactComponent } from './contact/contact.component';
 import { ScrollActiveDirective } from './scroll-active/scroll-active.directive';
+import { PopUpService } from './services/pop-up/pop-up.service';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ export class AppComponent implements OnInit {
 
   constructor (
     @Inject(PLATFORM_ID) private platformId: Object,
-    @Inject(DOCUMENT) private document: Document)
+    @Inject(DOCUMENT) private document: Document,
+    private popUpService: PopUpService)
   {
   }
 
@@ -45,10 +47,6 @@ export class AppComponent implements OnInit {
   }
 
   closePopUp () {
-    this.document.body.classList.remove('overflow-hidden');
-    let container = this.document.querySelector('.container');
-    container?.classList.remove('disabled');
-    let popUp = this.document.querySelector('app-pop-up');
-    popUp?.classList.remove('active');
+    this.popUpService.close();
   }
 }

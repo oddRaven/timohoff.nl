@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 
 import { LanguageSelectorComponent } from '../language-selector/language-selector.component';
 import { NoteDirective } from '../note/note.directive';
+import { PopUpService } from '../services/pop-up/pop-up.service';
 
 @Component({
   selector: '[app-header]',
@@ -17,14 +18,11 @@ export class HeaderComponent {
 
 
   constructor(
-    @Inject(DOCUMENT) private document: Document)
+    @Inject(DOCUMENT) private document: Document,
+    private popUpService: PopUpService)
   {}
 
   openMobileMenu () {
-    this.document.body.classList.add('overflow-hidden');
-    let container = this.document.querySelector('.container');
-    container?.classList.add('disabled');
-    let popUp = this.document.querySelector('app-pop-up');
-    popUp?.classList.add('active');
+    this.popUpService.open();
   }
 }
