@@ -11,7 +11,7 @@ import { Table } from '../collapsible-table/table';
   styleUrl: './requirements.component.scss'
 })
 export class RequirementsComponent {
-  table : Table = {
+  requirementsTable : Table = {
     header: ['Number', 'Definition', 'Completed'],
     items: [
       {
@@ -21,7 +21,7 @@ export class RequirementsComponent {
         subItems: [
           {
             class: 'background-red',
-            cells: ['1.1', 'The website must be available on mobile web browsers.', '\u2713'],
+            cells: ['1.1', 'The website must be available on <mobile web browsers>.', '\u2713'],
             subItems: [
               {
                 class: 'background-orange',
@@ -34,13 +34,13 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['1.2', 'The website must be available on desktop web browsers.', '\u2713'],
+            cells: ['1.2', 'The website must be available on <desktop web browsers>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
-            class: 'background-red',
-            cells: ['1.3', 'The website must be available on web browsers without javascript.', '\u2713'],
+            class: 'background-yellow',
+            cells: ['1.3', 'The website could be available on web browsers without javascript.', '\u2713'],
             subItems: [],
             isHidden: true
           }
@@ -58,13 +58,13 @@ export class RequirementsComponent {
         subItems: [
           {
             class: 'background-yellow',
-            cells: ['3.1', 'The website could support multiple languages.', '\u2713'],
+            cells: ['3.1', 'The website could support multiple <languages>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
             class: 'background-orange',
-            cells: ['3.2', 'The website should support screen readers.', ''],
+            cells: ['3.2', 'The website should support <screen readers>.', ''],
             subItems: [],
             isHidden: true
           },
@@ -164,7 +164,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['6.2', 'The website repository must not be responsible for tracking sensitive personal information.', '\u2713'],
+            cells: ['6.2', 'The website repository must not be responsible for tracking sensitive <personal information>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
@@ -176,6 +176,125 @@ export class RequirementsComponent {
         cells: ['7', 'The website uses Angular for seperation of concerns.', '\u2713'],
         subItems: [],
         isHidden: false
+      }
+    ]
+  };
+
+  specificationsTable : Table = {
+    header: ['Specification'],
+    items: [
+      {
+        class: '',
+        cells: ['<desktop web browsers>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['Google Chrome'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Microsoft Edge'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Apple Safari'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['<mobile web browsers>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['Brave'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Google Chrome'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Samsung Internet Browser'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Apple Safari'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['<languages>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['Dutch'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['English'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['<screen readers>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['Apple VoiceOver'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Windows Narrator'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['<personal information>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['photos'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['text about people, cats'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
       }
     ]
   }
