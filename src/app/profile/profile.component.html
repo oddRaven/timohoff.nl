@@ -1,6 +1,6 @@
 @if (profile != null) {
     @if (profile.imageUrl != null && profile.imageUrl != '') {
-        <img [src]="profile.imageUrl" class='profile' />
+        <img [src]="profile.imageUrl" [alt]="profile.imageAlt" class='profile' tabindex="0" />
     }
     @else {
         <div class='profile'>

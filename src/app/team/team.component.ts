@@ -17,18 +17,21 @@ export class TeamComponent {
   profiles : Profile[] = [
     {
       imageUrl: 'http://file.timohoff.nl/mozes.jpg',
+      imageAlt: $localize`:@@mozesAlt:alt`,
       name: 'Mozes',
       emoji: '',
       description: $localize`:@@mozesDescription:description`
     },
     {
       imageUrl: 'http://file.timohoff.nl/timo.jpg',
+      imageAlt: $localize`:@@timoAlt:alt`,
       name: 'Timo',
       emoji: '',
       description: $localize`:@@timoDescription:description`
     },
     {
       imageUrl: 'http://file.timohoff.nl/aiko.jpg',
+      imageAlt: $localize`:@@aikoAlt:alt`,
       name: 'Aiko',
       emoji: '',
       description: $localize`:@@aikoDescription:description`
