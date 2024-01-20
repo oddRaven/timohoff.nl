@@ -92,7 +92,7 @@ export class RequirementsComponent {
       },
       {
         class: 'background-red',
-        cells: ['5', 'The website content must be complete.', ''],
+        cells: ['5', 'The website content must be complete.', '\u2713'],
         subItems: [
           {
             class: 'background-red',
@@ -108,7 +108,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['5.3', 'The website team content must be complete.', ''],
+            cells: ['5.3', 'The website team content must be complete.', '\u2713'],
             subItems: [
               {
                 class: 'background-orange',
@@ -118,7 +118,7 @@ export class RequirementsComponent {
               },
               {
                 class: 'background-red',
-                cells: ['5.3.2', 'The website team profiles must have a default picture.', ''],
+                cells: ['5.3.2', 'The website team profiles must have a default picture.', '\u2713'],
                 subItems: [],
                 isHidden: true
               },

@@ -12,8 +12,6 @@ import { NoteDirective } from '../note/note.directive'
   styleUrl: './passions.component.scss'
 })
 export class PassionsComponent {
-  passionsNote = $localize`:@@passionsNote:passions`;
-
   profiles : Profile[] = [
     {
       imageUrl: 'http://file.timohoff.nl/zwembad-de-kwakel.jpg',
