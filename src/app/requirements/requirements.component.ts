@@ -54,7 +54,7 @@ export class RequirementsComponent {
       },
       {
         class: 'background-orange',
-        cells: ['3', 'The website should be accesible.', ''],
+        cells: ['3', 'The website should be accesible.', '\u2713'],
         subItems: [
           {
             class: 'background-yellow',
@@ -64,7 +64,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-orange',
-            cells: ['3.2', 'The website should support <screen readers>.', ''],
+            cells: ['3.2', 'The website should support <screen readers>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
@@ -124,7 +124,7 @@ export class RequirementsComponent {
               },
               {
                 class: 'background-orange',
-                cells: ['5.3.3', 'The website team profiles should have a respective description.', ''],
+                cells: ['5.3.3', 'The website team profiles should have a respective description.', '\u2713'],
                 subItems: [],
                 isHidden: true
               }
@@ -139,13 +139,19 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['5.5', 'The website passions content must be filled.', ''],
+            cells: ['5.5', 'The website passions content must be filled.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
             class: 'background-red',
             cells: ['5.6', "The website meta 'website' content must be complete.", ''],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: 'background-red',
+            cells: ['5.7', "The website contact content must be filled.", '\u2713'],
             subItems: [],
             isHidden: true
           }

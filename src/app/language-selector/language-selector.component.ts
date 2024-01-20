@@ -12,6 +12,9 @@ export class LanguageSelectorComponent {
   protected isEnglish: boolean = false; 
   protected isDutch: boolean = false; 
 
+  protected dutch: string = $localize`:@@dutch:dutch`;
+  protected english: string = $localize`:@@english:english`;
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     @Inject(DOCUMENT) private document: Document)

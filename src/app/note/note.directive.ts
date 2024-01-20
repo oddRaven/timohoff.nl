@@ -22,6 +22,8 @@ export class NoteDirective implements OnInit {
 
     let divElement = this.document.createElement("div");
     divElement.setAttribute('tabindex', '0');
+    let noteText = $localize`:@@note:note`;
+    divElement.setAttribute('title', noteText);
     divElement.textContent = "💡";
     divElement.classList.add('note-lightbulb');
     divElement.addEventListener('click', (e) => this.clickNote());
