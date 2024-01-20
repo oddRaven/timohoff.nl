@@ -133,7 +133,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['5.4', 'The website skills content must be complete.', ''],
+            cells: ['5.4', 'The website skills content must be complete.', '\u2713'],
             subItems: [],
             isHidden: true
           },
@@ -145,7 +145,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-red',
-            cells: ['5.6', "The website meta 'website' content must be complete.", ''],
+            cells: ['5.6', "The website meta 'website' content must be complete.", '\u2713'],
             subItems: [],
             isHidden: true
           },
@@ -164,7 +164,7 @@ export class RequirementsComponent {
         subItems: [
           {
             class: 'background-orange',
-            cells: ['6.1', 'The website repository should be hosted on Github, as backup.', ''],
+            cells: ['6.1', 'The website repository should be hosted on Github, as backup.', '\u2713'],
             subItems: [],
             isHidden: true
           },

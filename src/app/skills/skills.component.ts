@@ -19,6 +19,56 @@ export class SkillsComponent {
     items: [
       {
         class: '',
+        cells: ['Markup Language', 'Active'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['HTML', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['XML', 'Known'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['XAML', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['Query Language', 'Active'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['T-SQL', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['MySQL', 'Known'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['PostgreSQL', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
         cells: ['Programming Language', 'Active'],
         isHidden: false,
         subItems: [
@@ -30,13 +80,13 @@ export class SkillsComponent {
           },
           {
             class: '',
-            cells: ['C++', 'Known'],
+            cells: ['C#', 'Active'],
             subItems: [],
             isHidden: true
           },
           {
             class: '',
-            cells: ['HTML', 'Active'],
+            cells: ['C++', 'Known'],
             subItems: [],
             isHidden: true
           },
@@ -60,13 +110,13 @@ export class SkillsComponent {
           },
           {
             class: '',
-            cells: ['Java', 'Known'],
+            cells: ['TypeScript', 'Active'],
             subItems: [],
             isHidden: true
           },
           {
             class: '',
-            cells: ['T-SQL', 'Active'],
+            cells: ['Java', 'Known'],
             subItems: [],
             isHidden: true
           },
@@ -148,6 +198,25 @@ export class SkillsComponent {
       },
       {
         class: '',
+        cells: ['GUI Tech', 'Known'],
+        subItems: [
+          {
+            class: '',
+            cells: ['Windows Forms', 'Known'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['WPF', 'Known'],
+            subItems: [],
+            isHidden: true
+          }
+        ],
+        isHidden: false
+      },
+      {
+        class: '',
         cells: ['Web Tech', 'Active'],
         subItems: [
           {
@@ -215,6 +284,12 @@ export class SkillsComponent {
           {
             class: '',
             cells: ['Android Studio', 'Active'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Eclipse', 'Known'],
             subItems: [],
             isHidden: true
           }
