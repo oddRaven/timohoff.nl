@@ -1,0 +1,12 @@
+@import '../shared/variables';
+
+:host {
+    width: 100%;
+
+    p {
+        background: $background-color;
+        overflow: hidden;
+        margin: 0px;
+        padding: 2px;
+    }
+}

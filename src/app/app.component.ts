@@ -1,5 +1,5 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
-import { CommonModule, isPlatformServer, DOCUMENT } from '@angular/common';
+import { CommonModule, isPlatformServer } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
 
   constructor (
     @Inject(PLATFORM_ID) private platformId: Object,
-    @Inject(DOCUMENT) private document: Document,
     private popUpService: PopUpService)
   {
   }
