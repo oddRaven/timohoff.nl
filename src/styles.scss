@@ -66,12 +66,32 @@ a:hover {
 
 .note-container {
     width: 100%;
+    background: #FFF03A;
 
     .note {
-        background: #FFF03A;
         text-align: left;
         padding: 2px;
         margin: 0px;
+    }
+
+    .exit {
+        text-align: center;
+        padding-bottom: 2px;
+        cursor: pointer;
+    }
+
+    &.position-fixed {
+        position: fixed;
+        left: 0px;
+        z-index: 1;
+
+        .note {
+            display: inline-block;
+        }
+
+        @media (max-width: 500px) {
+            top: $header-height;
+        }
     }
 }
 
@@ -112,5 +132,9 @@ app-profiles {
 @media (max-width: 500px) {
     body {
         margin: 0px;
+    }
+
+    h1 {
+        display: inline-block;
     }
 }

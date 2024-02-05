@@ -1,4 +1,4 @@
-<app-language-selector appNote [noteText]="flagsNote"></app-language-selector>
+<app-language-selector appNote [noteText]="flagsNote" [isPositionFixed]="true"></app-language-selector>
 <div class="mobile-headings" (click)="openMobileMenu()">
     <div class="mobile-heading scroll-active-about" i18n="@@about">About</div>
     <div class="mobile-heading scroll-active-team" i18n="@@team">Team</div>
@@ -7,7 +7,7 @@
     <div class="mobile-heading scroll-active-website" i18n="@@website">Website</div>
 </div>
 <div class="h1-container">
-    <h1 appNote [noteText]="wipNote">
+    <h1 appNote [noteText]="wipNote" [isPositionFixed]="true">
         <a href="#">Timo Hoff</a>
     </h1>
 </div>

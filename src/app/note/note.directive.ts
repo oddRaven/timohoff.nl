@@ -7,6 +7,7 @@ import { Directive, ElementRef, OnInit, Inject, Input, PLATFORM_ID } from '@angu
 })
 export class NoteDirective implements OnInit {
   @Input() noteText = '';
+  @Input() isPositionFixed = false;
 
   constructor(
     private elementRef: ElementRef, 
@@ -51,35 +52,47 @@ export class NoteDirective implements OnInit {
     paragraph.textContent = noteLabel + ": " + this.noteText;
     paragraph.classList.add('note');
 
+    let exit = this.document.createElement("div");
+    exit.setAttribute('tabindex', '0');
+    let noteText = $localize`:@@close:close`;
+    exit.setAttribute('title', noteText);
+    exit.textContent = '\u274c';
+    exit.classList.add('exit');
+    exit.addEventListener('click', (e) => this.closeNotes());
+    exit.addEventListener('keypress', (e) => e.key == 'Enter' && this.closeNotes());
+
     let containerElement = this.document.createElement("div");
     containerElement.classList.add('note-container');
-    this.positionElement(containerElement);
-    containerElement.append(paragraph);
 
-    this.elementRef.nativeElement.after(containerElement);
+    containerElement.append(paragraph);
+    containerElement.append(exit);
+
+    if(this.isPositionFixed == true){
+      containerElement.classList.add('position-fixed');
+      this.document.body.prepend(containerElement);
+    }
+    else{
+      this.elementRef.nativeElement.after(containerElement);
+    }
+
+    exit.focus();
+
     this.elementRef.nativeElement.classList.add('active-note');
   }
 
-  positionElement(containerElement : HTMLDivElement) {
-    let isPositionAbsolute = this.isPositionAsbsolute();
+  // In reality there will only be one note to be closed, but for convience and assurence this method closes all notes.
+  closeNotes () {
+    this.document
+      .querySelectorAll('.note-container')
+      .forEach(e => e.remove());
 
-    if (isPositionAbsolute) {
-      containerElement.style.position = "absolute";
-
-      let rect = this.elementRef.nativeElement.getBoundingClientRect();
-      containerElement.style.top = rect.bottom + 'px';
+    let lightbulbElement = this.document.querySelector('[appnote].active-note .note-lightbulb') as HTMLElement;
+    if(lightbulbElement != null){
+      lightbulbElement.focus();
     }
-  }
 
-  isPositionAsbsolute() {
-    const nativeElement = this.elementRef.nativeElement;
-
-    // Use Renderer2 to get the computed style
-    const computedStyle = window.getComputedStyle(nativeElement);
-
-    // Get the computed position property
-    const position = computedStyle.getPropertyValue('position');
-
-    return position == 'absolute';
+    this.document
+      .querySelectorAll('[appnote]')
+      .forEach(e => e.classList.remove('active-note'));
   }
 }
