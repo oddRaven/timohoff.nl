@@ -12,7 +12,7 @@ import { Table } from '../collapsible-table/table';
 })
 export class RequirementsComponent {
   requirementsTable : Table = {
-    header: ['Number', 'Definition', 'Completed'],
+    header: ['Nr', 'Definition', 'Completed'],
     items: [
       {
         class: 'background-red',
@@ -71,6 +71,24 @@ export class RequirementsComponent {
           {
             class: 'background-orange',
             cells: ['3.3', 'The website should support keyboard navigation.', '\u2713'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: 'background-orange',
+            cells: ['3.4', 'The website should scale to the document font-size preference, using css rem unit.', ''],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: 'background-orange',
+            cells: ['3.5', 'The website should have a link to skip the navigation.', ''],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: 'background-orange',
+            cells: ['3.6', 'The website should appealing in <OS contrast modes>.', ''],
             subItems: [],
             isHidden: true
           }
@@ -297,6 +315,37 @@ export class RequirementsComponent {
           {
             class: '',
             cells: ['text about people, cats'],
+            subItems: [],
+            isHidden: true
+          }
+        ]
+      },
+      {
+        class: '',
+        cells: ['<OS contrast modes>'],
+        isHidden: false,
+        subItems: [
+          {
+            class: '',
+            cells: ['Windows'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['MacOS'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['Android'],
+            subItems: [],
+            isHidden: true
+          },
+          {
+            class: '',
+            cells: ['iOS'],
             subItems: [],
             isHidden: true
           }
