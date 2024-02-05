@@ -26,6 +26,22 @@ app-pop-up {
     }
 }
 
+.content-skip {
+    z-index: 2;
+    top: -50px;
+    right: 0px;
+    position: fixed;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0px 0px 0px 4px;
+    padding: 2px;
+    background: #fafafa;
+
+    &:focus-within {
+        top: 0px;
+    }
+}
+
 .mobile-header-spacing {
     display: none;
     height: 40px;

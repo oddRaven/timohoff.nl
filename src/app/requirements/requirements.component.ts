@@ -82,7 +82,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-orange',
-            cells: ['3.5', 'The website should have a link to skip the navigation.', ''],
+            cells: ['3.5', 'The website should have a link to skip the navigation.', '\u2713'],
             subItems: [],
             isHidden: true
           },
