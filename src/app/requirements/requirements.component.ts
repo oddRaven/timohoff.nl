@@ -76,7 +76,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-orange',
-            cells: ['3.4', 'The website should scale to the document font-size preference, using css rem unit.', ''],
+            cells: ['3.4', 'The website should scale to the document font-size preference, using css rem unit.', '\u2713'],
             subItems: [],
             isHidden: true
           },
