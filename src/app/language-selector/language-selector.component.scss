@@ -17,49 +17,35 @@
             background: $foreground-active-color;
         }
 
-        .flag {
+        .language {
             width: 22px;
             height: 18px;
             position: relative;
             border: 1px solid black;
 
-            &.flag-white {
-                background: white;
-            }
-
-            .flag-cross-horizontal {
+            .flag {
                 position: absolute;
-                height: 4px;
-                top: 7px;
-                left: 0px;
-                right: 0px;
-                background: red;
-            }
-
-            .flag-cross-vertical {
-                position: absolute;
-                left: 9px;
-                width: 4px;
-                background: red;
-                top: 0px;
-                bottom: 0px;
-            }
-
-            .flag-row {
                 width: 100%;
-                height: 33.3%;
+                height: 100%;
 
-                &.flag-row-red {
-                    background: red;
+                &.dutch-flag {
+                    background: url('./assets/dutch\ flag.png');
                 }
 
-                &.flag-row-white {
-                    background: white;
+                &.english-flag {
+                    background: url('./assets/english\ flag.png');
                 }
+            }
 
-                &.flag-row-blue {
-                    background: blue;
+            @media (prefers-contrast: more) {
+                .flag {
+                    display: none;
                 }
+            }
+
+            .language-code {
+                text-align: center;
+                font-size: 14px;
             }
         }
     }

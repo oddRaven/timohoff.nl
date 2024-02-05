@@ -53,24 +53,24 @@ export class RequirementsComponent {
         isHidden: false
       },
       {
-        class: 'background-orange',
-        cells: ['3', 'The website should be accesible.', '\u2713'],
+        class: 'background-red',
+        cells: ['3', 'The website must be accesible.', '\u2713'],
         subItems: [
           {
-            class: 'background-yellow',
-            cells: ['3.1', 'The website could support multiple <languages>.', '\u2713'],
+            class: 'background-orange',
+            cells: ['3.1', 'The website should support multiple <languages>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
-            class: 'background-orange',
-            cells: ['3.2', 'The website should support <screen readers>.', '\u2713'],
+            class: 'background-red',
+            cells: ['3.2', 'The website must support <screen readers>.', '\u2713'],
             subItems: [],
             isHidden: true
           },
           {
-            class: 'background-orange',
-            cells: ['3.3', 'The website should support keyboard navigation.', '\u2713'],
+            class: 'background-red',
+            cells: ['3.3', 'The website must support keyboard navigation.', '\u2713'],
             subItems: [],
             isHidden: true
           },
@@ -88,7 +88,7 @@ export class RequirementsComponent {
           },
           {
             class: 'background-orange',
-            cells: ['3.6', 'The website should appealing in <OS contrast modes>.', ''],
+            cells: ['3.6', 'The website should appealing in <OS contrast modes>.', '\u2713'],
             subItems: [],
             isHidden: true
           }

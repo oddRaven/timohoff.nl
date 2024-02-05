@@ -1,13 +1,12 @@
 <div [title]="english" aria-hidden="true" class='box' [ngClass]="{'active': isEnglish}" tabindex="0" (click)="navigateToEnglish()" (keydown.enter)="navigateToEnglish()">
-    <div class="flag flag-white">
-        <div class="flag-cross-horizontal"></div>
-        <div class="flag-cross-vertical"></div>
+    <div class="language">
+        <div class="flag english-flag"></div>
+        <div class="language-code">EN</div>
     </div>
 </div>
 <div [title]="dutch" aria-hidden="true" class='box' [ngClass]="{'active': isDutch}" tabindex="0" (click)="navigateToDutch()" (keydown.enter)="navigateToDutch()">
-    <div class="flag">
-        <div class="flag-row flag-row-red"></div>
-        <div class="flag-row flag-row-white"></div>
-        <div class="flag-row flag-row-blue"></div>
+    <div class="language">
+        <div class="flag dutch-flag"></div>
+        <div class="language-code">NL</div>
     </div>
 </div>
