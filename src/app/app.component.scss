@@ -107,7 +107,7 @@ footer {
     padding-bottom: 0px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile-width) {
     .main {
         margin: 0px;
     }
