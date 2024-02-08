@@ -13,13 +13,30 @@
     
     .phase-title {
         height: 25px;
+        padding: 0px 4px;
 
         &.background-red {
             background-image: linear-gradient(red, $background-color);
         }
-        
+
         &.background-orange {
             background-image: linear-gradient(orange, $background-color);
+        }
+
+        &.background-lime {
+            background-image: linear-gradient(lime, $background-color);
+        }
+
+        &.background-grey {
+            background-image: linear-gradient(grey, $background-color);
+        }
+
+        &.background-aqua {
+            background-image: linear-gradient(aqua, $background-color);
+        }
+
+        &.background-c31e5f {
+            background-image: linear-gradient(#c31e5f, $background-color);
         }
     }
 }
@@ -27,12 +44,16 @@
 .waypoint {
     display: inline-block;
     width: 130px;
-    height: 150px;
+    height: 170px;
     vertical-align: top;
     position: relative;
 
     .waypoint-title {
-        height: 40px;
+        height: 60px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         white-space: collapse;
     }
@@ -59,6 +80,22 @@
             &.border-orange {
                 border-color: orange;
             }
+
+            &.border-lime {
+                border-color: lime;
+            }
+
+            &.border-grey {
+                border-color: grey;
+            }
+
+            &.border-aqua {
+                border-color: aqua;
+            }
+
+            &.border-c31e5f {
+                border-color: #c31e5f;
+            }
         }
     }
 
@@ -68,7 +105,7 @@
         width: 130px;
         height: 6px;
         left: 62px;
-        top: 85px;
+        top: 110px;
     }
 }
 
@@ -77,10 +114,10 @@
         display: block;
     
         .phase-title {
-            padding-left: 90px;
+            padding: 0px 0px 0px 90px;
         }
     }
-    
+
     .waypoint {
         display: flex;
         padding: 5px 0px;
@@ -91,6 +128,8 @@
         .waypoint-title {
             flex: 1;
             align-items: center;
+            justify-content: unset;
+            text-align: left;
             height: auto;
             display: flex;
             padding: 10px;

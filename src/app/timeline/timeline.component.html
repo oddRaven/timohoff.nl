@@ -1,37 +1,12 @@
-<div class="phase">
-    <div class="phase-title background-orange">Elementary</div>
+<div class="phase" *ngFor="let phase of timeline.phases; index as phaseIndex">
+    <div class="phase-title" [ngClass]="['background-' + phase.color]">{{ phase.title }}</div>
     <div class="phase-content">
-        <div class="waypoint">
-            <div class="waypoint-title">Montessori school</div>
+        <div class="waypoint" *ngFor="let waypoint of phase.waypoints; index as waypointIndex">
+            <div class="waypoint-title">{{ waypoint.title }}</div>
             <div class="waypoint-icon">
-                <img src="/assets/placeholder-square.jpg" class="border-orange" tabindex="0" />
+                <img [src]="[waypoint.imageSrc != null && waypoint.imageSrc != '' ? waypoint.imageSrc : '/assets/placeholder-square.jpg']" [ngClass]="[waypoint.isBound ? 'border-' + phase.color : '']" tabindex="0" />
             </div>
-            <div class="waypoint-connector"></div>
-        </div>
-    </div>
-</div>
-<div class="phase">
-    <div class="phase-title background-red">Secondary</div>
-    <div class="phase-content">
-        <div class="waypoint">
-            <div class="waypoint-title">VMBO-TL</div>
-            <div class="waypoint-icon">
-                <img src="/assets/placeholder-square.jpg" class="waypoint-icon border-red" tabindex="0" />
-            </div>
-            <div class="waypoint-connector"></div>
-        </div>
-        <div class="waypoint">
-            <div class="waypoint-title">Kranten-bezorger</div>
-            <div class="waypoint-icon">
-                <img src="/assets/placeholder-square.jpg" class="waypoint-icon" tabindex="0" />
-            </div>
-            <div class="waypoint-connector"></div>
-        </div>
-        <div class="waypoint">
-            <div class="waypoint-title">Logistiek medewerker</div>
-            <div class="waypoint-icon">
-                <img src="/assets/placeholder-square.jpg" class="waypoint-icon" tabindex="0" />
-            </div>
+            <div class="waypoint-connector" *ngIf="phaseIndex !== timeline.phases.length - 1 || waypointIndex !== phase.waypoints.length - 1"></div>
         </div>
     </div>
 </div>
