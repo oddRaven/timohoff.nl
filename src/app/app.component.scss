@@ -27,7 +27,7 @@ app-pop-up {
 }
 
 .content-skip {
-    z-index: 2;
+    z-index: 3;
     top: -50px;
     right: 0px;
     position: fixed;
@@ -107,7 +107,7 @@ footer {
     padding-bottom: 0px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile-width) {
     .main {
         margin: 0px;
     }
@@ -125,7 +125,7 @@ footer {
     }
 
     header {
-        z-index: 1;
+        z-index: 2;
         position: fixed;
         left: 0px;
         top: 0px;

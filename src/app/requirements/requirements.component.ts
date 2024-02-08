@@ -172,6 +172,12 @@ export class RequirementsComponent {
             cells: ['5.7', "The website contact content must be filled.", '\u2713'],
             subItems: [],
             isHidden: true
+          },
+          {
+            class: 'background-red',
+            cells: ['5.7', "The website career content must be filled.", ''],
+            subItems: [],
+            isHidden: true
           }
         ],
         isHidden: false

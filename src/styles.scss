@@ -129,7 +129,7 @@ app-profiles {
     color: $important-passive-color;
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile-width) {
     body {
         margin: 0px;
     }

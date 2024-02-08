@@ -33,7 +33,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: $mobile-width) {
   :host {
     width: 175px;
   }
