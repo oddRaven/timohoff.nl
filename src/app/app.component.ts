@@ -7,7 +7,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
-import { CareerComponent } from './career/career.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PassionsComponent } from './passions/passions.component';
 import { WebsiteComponent } from './website/website.component';
@@ -18,7 +18,7 @@ import { PopUpService } from './services/pop-up/pop-up.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, PopUpComponent, MenuComponent, AboutComponent, TeamComponent, CareerComponent, SkillsComponent, PassionsComponent, WebsiteComponent, ContactComponent, ScrollActiveDirective],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, PopUpComponent, MenuComponent, AboutComponent, TeamComponent, ExperiencesComponent, SkillsComponent, PassionsComponent, WebsiteComponent, ContactComponent, ScrollActiveDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

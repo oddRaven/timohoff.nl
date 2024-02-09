@@ -4,13 +4,13 @@ import { TimelineComponent } from '../timeline/timeline.component';
 import { Timeline } from '../timeline/timeline';
 
 @Component({
-  selector: 'app-career',
+  selector: 'app-experiences',
   standalone: true,
   imports: [TimelineComponent],
-  templateUrl: './career.component.html',
-  styleUrl: './career.component.scss'
+  templateUrl: './experiences.component.html',
+  styleUrl: './experiences.component.scss'
 })
-export class CareerComponent {
+export class ExperiencesComponent {
   timeline : Timeline = {
     phases : [
       {
