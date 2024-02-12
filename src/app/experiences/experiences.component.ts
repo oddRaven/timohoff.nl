@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 import { TimelineComponent } from '../timeline/timeline.component';
 import { Timeline } from '../timeline/timeline';
+import { StickyScrollDirective } from '../sticky-scroll/sticky-scroll.directive';
 
 @Component({
   selector: 'app-experiences',
   standalone: true,
-  imports: [TimelineComponent],
+  imports: [ StickyScrollDirective, TimelineComponent ],
   templateUrl: './experiences.component.html',
   styleUrl: './experiences.component.scss'
 })
