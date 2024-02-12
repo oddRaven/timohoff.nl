@@ -5,6 +5,17 @@
     white-space: nowrap;
     width: 100%;
     display: block;
+    visibility: hidden;
+
+    &.visible {
+        visibility: visible;
+        animation: fadein 1s;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .phase {

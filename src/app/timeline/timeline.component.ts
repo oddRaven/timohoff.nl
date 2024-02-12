@@ -12,9 +12,13 @@ import { Timeline } from './timeline';
 })
 export class TimelineComponent implements AfterViewInit {
   @Input() timeline!: Timeline;
+  previousScrollY = 0;
+  isUserScrolling = false;
 
-  constructor (private elementRef: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object){
+  constructor (
+    private elementRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object)
+  {
   }
 
   ngAfterViewInit(): void {
@@ -23,20 +27,47 @@ export class TimelineComponent implements AfterViewInit {
     }
 
     let element = this.elementRef.nativeElement;
-    let startTime = Date.now();
-    let endScroll = element.scrollWidth - element.clientWidth;
 
-    let interval = setInterval(() => {
-      let timePassed = Date.now() - startTime;
+    if (window.screen.width <= 500) {
+      element.style.height = window.screen.height - 40 + 'px';
 
-      if(timePassed >= endScroll) {
-        element.scrollLeft = endScroll;
-        clearInterval(interval);
-        return;
-      }
-      else {
-        element.scrollLeft = timePassed;
-      }
-    }, 10);
+      element.onscroll =  (event: any) => {
+        const currentScrollY = event.target.scrollTop;
+        const deltaScroll = currentScrollY - this.previousScrollY;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (this.isUserScrolling == true &&
+        (elementTop < 40 && deltaScroll < 0
+        || elementTop > 40 && deltaScroll > 0)) {
+          event.preventDefault();
+          event.target.scrollTop = this.previousScrollY;
+          window.scrollBy(0, deltaScroll);
+        }
+        else {
+          this.previousScrollY = currentScrollY;
+        }
+      };
+
+      element.addEventListener("wheel", () => {
+        this.isUserScrolling = true;
+      });
+
+      element.addEventListener("touchstart", () => {
+        this.isUserScrolling = true;
+      });
+
+      element.addEventListener("touchend", () => {
+        this.isUserScrolling = false;
+      });
+
+      element.addEventListener("mouseup", () => {
+        this.isUserScrolling = false;
+      });
+
+      this.previousScrollY = element.scrollTop;
+    }
+
+    element.scroll(element.scrollWidth, element.scrollHeight);
+    element.classList.add('visible');
   }
 }

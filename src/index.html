@@ -5,6 +5,13 @@
         <title>Timo's Site</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self' 'unsafe-inline';
+            img-src 'self' http://file.timohoff.nl;
+            script-src 'self';
+            style-src 'self' 'unsafe-inline';
+            style-src-elem 'self' https://fonts.googleapis.com 'unsafe-inline';
+            font-src 'self' https://fonts.gstatic.com;">
 
         <link rel="icon" type="image/ico" href="./assets/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
