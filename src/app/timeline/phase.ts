@@ -1,7 +1,7 @@
-import { Waypoint } from './waypoint'
+import { IWaypoint } from './waypoint'
 
 export interface Phase {
     color: string;
     title: string;
-    waypoints: Waypoint[];
+    waypoints: IWaypoint[];
 }

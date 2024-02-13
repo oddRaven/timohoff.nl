@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { Timeline } from '../timeline/timeline';
 import { StickyScrollDirective } from '../sticky-scroll/sticky-scroll.directive';
+import { Waypoint } from '../timeline/waypoint';
 
 @Component({
   selector: 'app-experiences',
@@ -18,141 +19,122 @@ export class ExperiencesComponent {
         title: 'Elementary',
         color: 'orange',
         waypoints: [
-          {
+          new Waypoint({
             title: 'Montessori school',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/montessori 2011 white.png'
-          }
+          })
         ]
       },
       {
         title: 'Secondary',
         color: 'red',
         waypoints: [
-          {
+          new Waypoint({
             title: 'VMBO-TL',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/lek en linge white.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Krantenbezorger',
             isBound: false,
-            imageSrc: ''
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Logistiek-medewerker 2010',
             isBound: false,
             imageSrc: 'https://file.timohoff.nl/centraal boekhuis white.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Logistiek-medewerker 2011',
             isBound: false,
             imageSrc: 'https://file.timohoff.nl/centraal boekhuis white.png'
-          }
+          })
         ]
       },
       {
         title: 'MBO',
         color: 'lime',
         waypoints: [
-          {
+          new Waypoint({
             title: 'Application Development',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/kw1c logo 2011.jpeg'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Development internship',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/stb logo squared.jpeg'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Web development iternship',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/safira 2014 white.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'PHP development timohoff.nl',
             isBound: false,
-            imageSrc: ''
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Java game development',
             isBound: false,
-            imageSrc: ''
-          }
+          })
         ]
       },
       {
         title: 'HBO',
         color: 'aqua',
         waypoints: [
-          {
+          new Waypoint({
             title: 'Informatica - Software Engineering',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/avans.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Logistiek-medewerker',
             isBound: false,
             imageSrc: 'https://file.timohoff.nl/blokker wrap logo.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Software engineer internship',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/cordis suite.png'
-          },
+          }),
         ]
       },
       {
         title: 'MediMapp',
         color: 'c31e5f',
         waypoints: [
-          {
+          new Waypoint({
             title: 'Junior Software Engineer',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/medimapp.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Soulve scaleup',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/medimapp.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'C++ game engine development',
             isBound: false,
-            imageSrc: ''
-          },
-          {
+          }),
+          new Waypoint({
             title: '.NET migration',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/medimapp.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Soulve scaledown',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/medimapp.png'
-          },
-          {
+          }),
+          new Waypoint({
             title: 'C# game engine development',
             isBound: false,
-            imageSrc: ''
-          },
-          {
+          }),
+          new Waypoint({
             title: 'Soulve end',
-            isBound: true,
             imageSrc: 'https://file.timohoff.nl/medimapp.png'
-          }
+          })
         ]
       },
       {
         title: 'Career transition',
         color: 'grey',
         waypoints: [
-          {
+          new Waypoint({
             title: 'Angular development timohoff.nl',
-            isBound: true,
-            imageSrc: ''
-          },
+          }),
         ]
       }
     ]
