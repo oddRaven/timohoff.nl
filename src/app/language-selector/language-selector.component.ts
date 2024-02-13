@@ -28,10 +28,10 @@ export class LanguageSelectorComponent {
   }
 
   navigateToEnglish() {
-    this.document.location.href = 'http://timohoff.nl/en';
+    this.document.location.href = 'https://timohoff.nl/en';
   }
 
   navigateToDutch() {
-    this.document.location.href = 'http://timohoff.nl/';
+    this.document.location.href = 'https://timohoff.nl/';
   }
 }

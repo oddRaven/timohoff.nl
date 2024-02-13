@@ -21,7 +21,7 @@ export class ExperiencesComponent {
           {
             title: 'Montessori school',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/montessori 2011 white.png'
+            imageSrc: 'https://file.timohoff.nl/montessori 2011 white.png'
           }
         ]
       },
@@ -32,7 +32,7 @@ export class ExperiencesComponent {
           {
             title: 'VMBO-TL',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/lek en linge white.png'
+            imageSrc: 'https://file.timohoff.nl/lek en linge white.png'
           },
           {
             title: 'Krantenbezorger',
@@ -42,12 +42,12 @@ export class ExperiencesComponent {
           {
             title: 'Logistiek-medewerker 2010',
             isBound: false,
-            imageSrc: 'http://file.timohoff.nl/centraal boekhuis white.png'
+            imageSrc: 'https://file.timohoff.nl/centraal boekhuis white.png'
           },
           {
             title: 'Logistiek-medewerker 2011',
             isBound: false,
-            imageSrc: 'http://file.timohoff.nl/centraal boekhuis white.png'
+            imageSrc: 'https://file.timohoff.nl/centraal boekhuis white.png'
           }
         ]
       },
@@ -58,17 +58,17 @@ export class ExperiencesComponent {
           {
             title: 'Application Development',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/kw1c logo 2011.jpeg'
+            imageSrc: 'https://file.timohoff.nl/kw1c logo 2011.jpeg'
           },
           {
             title: 'Development internship',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/stb logo squared.jpeg'
+            imageSrc: 'https://file.timohoff.nl/stb logo squared.jpeg'
           },
           {
             title: 'Web development iternship',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/safira 2014 white.png'
+            imageSrc: 'https://file.timohoff.nl/safira 2014 white.png'
           },
           {
             title: 'PHP development timohoff.nl',
@@ -89,17 +89,17 @@ export class ExperiencesComponent {
           {
             title: 'Informatica - Software Engineering',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/avans.png'
+            imageSrc: 'https://file.timohoff.nl/avans.png'
           },
           {
             title: 'Logistiek-medewerker',
             isBound: false,
-            imageSrc: 'http://file.timohoff.nl/blokker wrap logo.png'
+            imageSrc: 'https://file.timohoff.nl/blokker wrap logo.png'
           },
           {
             title: 'Software engineer internship',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/cordis suite.png'
+            imageSrc: 'https://file.timohoff.nl/cordis suite.png'
           },
         ]
       },
@@ -110,12 +110,12 @@ export class ExperiencesComponent {
           {
             title: 'Junior Software Engineer',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/medimapp.png'
+            imageSrc: 'https://file.timohoff.nl/medimapp.png'
           },
           {
             title: 'Soulve scaleup',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/medimapp.png'
+            imageSrc: 'https://file.timohoff.nl/medimapp.png'
           },
           {
             title: 'C++ game engine development',
@@ -125,12 +125,12 @@ export class ExperiencesComponent {
           {
             title: '.NET migration',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/medimapp.png'
+            imageSrc: 'https://file.timohoff.nl/medimapp.png'
           },
           {
             title: 'Soulve scaledown',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/medimapp.png'
+            imageSrc: 'https://file.timohoff.nl/medimapp.png'
           },
           {
             title: 'C# game engine development',
@@ -140,7 +140,7 @@ export class ExperiencesComponent {
           {
             title: 'Soulve end',
             isBound: true,
-            imageSrc: 'http://file.timohoff.nl/medimapp.png'
+            imageSrc: 'https://file.timohoff.nl/medimapp.png'
           }
         ]
       },
