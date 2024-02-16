@@ -1,0 +1,15 @@
+@if (experience != null) {
+    <div class='short'>
+        <div>
+            <span class="bold">Locatie</span>&nbsp;
+            <span>{{ experience ? experience.location : '' }}</span>
+        </div>
+        <div>
+            <span class="bold">Vaardigheden</span>
+            <ul>
+                <li *ngFor="let skill of experience.skills">{{ skill }}</li>
+            </ul>
+        </div>
+    </div>
+    <div class='description'>{{ experience ? experience.description : '' }}</div>
+}

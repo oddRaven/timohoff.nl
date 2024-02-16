@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    background: #fafafa;
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .short {
+        width: 200px;
+        border: 1px solid #808080;
+        border-collapse: collapse;
+        padding: 3px;
+
+        ul {
+            margin: 0px;
+            padding: 0px 0px 0px 20px;
+        }
+    }
+
+    .description {
+        flex: 1; 
+        border: 1px solid #808080;
+        border-collapse: collapse;
+        padding: 3px;
+    }
+}

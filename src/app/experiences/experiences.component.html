@@ -2,4 +2,5 @@
 
 <p>Below is a timeline of my education and work experiences.</p>
 
-<app-timeline [timeline]="timeline" appStickyScroll></app-timeline>
+<app-timeline [timeline]="timeline" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
+<app-experience-overview *ngIf="selectExperience != null" [experience]="selectedExperience"></app-experience-overview>

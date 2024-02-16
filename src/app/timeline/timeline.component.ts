@@ -1,7 +1,8 @@
-import { Component, Input, ElementRef, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { NgClass, NgIf, NgFor, isPlatformServer } from '@angular/common';
 
 import { Timeline } from './timeline';
+import { IWaypoint } from './waypoint';
 
 @Component({
   selector: 'app-timeline',
@@ -12,6 +13,7 @@ import { Timeline } from './timeline';
 })
 export class TimelineComponent implements AfterViewInit {
   @Input() timeline!: Timeline;
+  @Output() selectWaypoint = new EventEmitter<IWaypoint>();
 
   constructor (
     private elementRef: ElementRef,
@@ -25,6 +27,10 @@ export class TimelineComponent implements AfterViewInit {
     }
 
     window.setTimeout(() => this.showCurrent());
+  }
+
+  public select (waypoint: IWaypoint){
+    this.selectWaypoint.emit(waypoint);
   }
 
   private showCurrent(){

@@ -1,7 +1,7 @@
 <div class="phase" *ngFor="let phase of timeline.phases; index as phaseIndex">
     <div class="phase-title" [ngClass]="['background-' + phase.color]">{{ phase.title }}</div>
     <div class="phase-content">
-        <div class="waypoint" *ngFor="let waypoint of phase.waypoints; index as waypointIndex">
+        <div class="waypoint" *ngFor="let waypoint of phase.waypoints; index as waypointIndex" (click)="select(waypoint)">
             <div class="waypoint-title">{{ waypoint.title }}</div>
             <div class="waypoint-icon">
                 <img [src]="waypoint.imageSrc" [ngClass]="[waypoint.isBound ? 'border-' + phase.color : '']" tabindex="0" />
