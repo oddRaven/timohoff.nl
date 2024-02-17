@@ -1,0 +1,28 @@
+@import '../shared/variables';
+
+:host {
+    display: block;
+}
+
+.content-container {
+    padding: 2px 0px;
+
+    &:first-child {
+        padding-top: 0px;
+    }
+
+    &:last-child {
+        padding-bottom: 0px;
+    }
+
+    .content {
+        padding: 5px;
+        background: $foreground-color;
+        border-radius: 2px;
+        display: block;
+    }
+
+    &.active .content {
+        background: $foreground-active-color;
+    }
+}

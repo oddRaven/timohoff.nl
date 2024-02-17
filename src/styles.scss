@@ -89,7 +89,7 @@ a:hover {
             display: inline-block;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: $mobile-width) {
             top: $header-height;
         }
     }

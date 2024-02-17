@@ -42,11 +42,6 @@ app-pop-up {
     }
 }
 
-.mobile-header-spacing {
-    display: none;
-    height: $header-height;
-}
-
 .extra-container {
     width: $extra-width;
     height: 100%;
@@ -74,6 +69,11 @@ app-pop-up {
     position: relative;
 }
 
+.mobile-header-spacing {
+    display: none;
+    height: $header-height;
+}
+
 .main {
     margin-left: $extra-width;
 }
@@ -84,36 +84,13 @@ footer {
     padding: 5px 0px;
 }
 
-.content-container {
-    padding: 2px 0px;
-
-    .content {
-        padding: 5px;
-        background: $foreground-color;
-        border-radius: 2px;
-        display: block;
-    }
-
-    &.active .content {
-        background: $foreground-active-color;
-    }
-}
-
-.content-container:first-child {
-    padding-top: 0px;
-}
-
-.content-container:last-child {
-    padding-bottom: 0px;
-}
-
 @media (max-width: $mobile-width) {
-    .main {
-        margin: 0px;
-    }
-
     .mobile-header-spacing {
         display: block;
+    }
+
+    .main {
+        margin: 0px;
     }
 
     .extra-container .extra {

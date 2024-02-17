@@ -151,5 +151,10 @@ export class ExperiencesComponent {
 
   public selectExperience (waypoint : IWaypoint) {
     this.selectedExperience = waypoint as Experience;
+
+    if(window.screen.width <= 500)
+    {
+      window.location.href = '/experience';
+    }
   }
 }

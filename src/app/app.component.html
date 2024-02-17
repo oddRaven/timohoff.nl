@@ -20,29 +20,8 @@
   <div class="main">
     <div class="mobile-header-spacing"></div>
 
-    <div>
-      <div class="content-container" appScrollActive selector=".scroll-active-about" [offset]="offset">
-        <app-about id="about" class="content"></app-about>
-      </div>
-      <div class="content-container" appScrollActive selector=".scroll-active-team" [offset]="offset">
-        <app-team id="team" class="content"></app-team>
-      </div>
-      <div class="content-container" appScrollActive selector=".scroll-active-experiences" [offset]="offset">
-        <app-experiences id="experiences" class="content"></app-experiences>
-      </div>
-      <div class="content-container" appScrollActive selector=".scroll-active-passions" [offset]="offset">
-        <app-passions id="passions" class="content"></app-passions>
-      </div>
-      <div class="content-container" appScrollActive selector=".scroll-active-website" [offset]="offset">
-        <app-website id="website" class="content"></app-website>
-      </div>
-      <div class="content-container" appScrollActive selector=".scroll-active-contact" [offset]="offset">
-        <app-contact id="contact" class="content"></app-contact>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 
   <footer>2023 - 2024</footer>
 </div>
-
-<router-outlet></router-outlet>

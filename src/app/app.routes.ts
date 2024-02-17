@@ -1,3 +1,19 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { ExperienceComponent } from './experience/experience.component';
+import { MainComponent } from './main/main.component';
+
+export const routes: Routes = [
+    {
+        path: '',
+        component: MainComponent
+    },
+    {
+        path: 'experience',
+        component: ExperienceComponent
+    },
+    {
+        path: '**',
+        redirectTo: ''
+    }
+];
