@@ -1,15 +1,23 @@
 @if (experience != null) {
     <div class='short'>
-        <div>
-            <span class="bold">Locatie</span>&nbsp;
-            <span>{{ experience ? experience.location : '' }}</span>
+        <div class="location outer">
+            <p class="inner">
+                <span class="bold">Locatie</span>&nbsp;
+                <span>{{ experience ? experience.location : '' }}</span>
+            </p>
         </div>
-        <div>
-            <span class="bold">Vaardigheden</span>
-            <ul>
-                <li *ngFor="let skill of experience.skills">{{ skill }}</li>
-            </ul>
+        <div class="skills outer">
+            <div class="inner">
+                <span class="bold">Vaardigheden</span>
+                <ul>
+                    <li *ngFor="let skill of experience.skills">{{ skill }}</li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class='description'>{{ experience ? experience.description : '' }}</div>
+    <div class='description outer'>
+        <div class="description-background">
+            <p class="inner">{{ experience ? experience.description : '' }}</p>
+        </div>
+    </div>
 }

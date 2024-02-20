@@ -2,7 +2,6 @@
 
 :host {
     display: flex;
-    background: $background-color;
 
     .bold {
         font-weight: bold;
@@ -10,9 +9,6 @@
 
     .short {
         width: 200px;
-        border: 1px solid #808080;
-        border-collapse: collapse;
-        padding: 3px;
 
         ul {
             margin: 0px;
@@ -22,9 +18,26 @@
 
     .description {
         flex: 1; 
-        border: 1px solid #808080;
-        border-collapse: collapse;
-        padding: 3px;
+
+        .description-background {
+            height: 100%;
+            background: $background-color;
+        }
+    }
+
+    .outer {
+        padding: 4px;
+    }
+
+    .inner {
+        background: $background-color;
+        padding: 4px;
+        margin: 0px;
+    }
+
+    .skills .inner {
+        max-height: 150px;
+        overflow: scroll;
     }
 }
 

@@ -9,7 +9,7 @@ export const routes: Routes = [
         component: MainComponent
     },
     {
-        path: 'experience',
+        path: 'experience/:id',
         component: ExperienceComponent
     },
     {
