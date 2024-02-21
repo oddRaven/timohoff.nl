@@ -6,6 +6,7 @@
     width: 100%;
     display: block;
     visibility: hidden;
+    position: relative;
 
     &.visible {
         visibility: visible;
@@ -16,6 +17,17 @@
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.selector {
+    position: absolute;
+    width: 114px;
+    height: 119px;
+    background: white;
+    bottom: 0px;
+    border-radius: 50% 50% 0 0;
+    left: -150px;
+    z-index: 1;
 }
 
 .phase {
@@ -61,11 +73,6 @@
     vertical-align: top;
     position: relative;
     cursor: pointer;
-    border-left: 1px solid gray;
-
-    &.first {
-        border-left: 0px;
-    }
 
     .waypoint-title {
         height: 60px;
@@ -84,7 +91,7 @@
         
         img {
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -146,17 +153,6 @@
         flex-direction: row-reverse;
         width: auto;
         height: auto;
-        border-top: 1px solid gray;
-        border-left: 0px;
-
-        // First waypoint in phase.
-        &:first-of-type {
-            border-top: 0px;
-        }
-
-        .first {
-            border-top: 0px;
-        }
 
         .waypoint-title {
             flex: 1;

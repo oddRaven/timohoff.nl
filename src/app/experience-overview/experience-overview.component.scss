@@ -2,6 +2,7 @@
 
 :host {
     display: flex;
+    background: white;
 
     .bold {
         font-weight: bold;
@@ -9,35 +10,50 @@
 
     .short {
         width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
 
-        ul {
-            margin: 0px;
-            padding: 0px 0px 0px 20px;
+        .location {
+            height: 30px;
+        }
+
+        .skills {
+            flex: 1;
+
+            .inner {
+                min-height: 100%;
+                box-sizing: border-box;
+
+                ul {
+                    margin: 0px;
+                    padding: 0px 0px 0px 20px;
+                }
+            }
         }
     }
 
     .description {
         flex: 1; 
+        height: 200px;
+        box-sizing: border-box;
 
-        .description-background {
+        .inner {
             height: 100%;
-            background: $background-color;
+            box-sizing: border-box;
         }
     }
 
     .outer {
         padding: 4px;
-    }
 
-    .inner {
-        background: $background-color;
-        padding: 4px;
-        margin: 0px;
-    }
-
-    .skills .inner {
-        max-height: 150px;
-        overflow: scroll;
+        .inner {
+            border: 1px solid #E5E4E2;
+            padding: 4px;
+            margin: 0px;
+            overflow: scroll;
+        }
     }
 }
 

@@ -9,15 +9,17 @@ import { ITimeline } from '../timeline/timeline';
 import { IWaypoint } from '../timeline/waypoint';
 import { ExperiencesService } from '../services/experiences/experiences.service';
 import { StickyScrollDirective } from '../sticky-scroll/sticky-scroll.directive';
+import { NoteDirective } from '../note/note.directive'
 
 @Component({
   selector: 'app-experiences',
   standalone: true,
-  imports: [ ExperienceOverviewComponent, StickyScrollDirective, TimelineComponent, NgIf ],
+  imports: [ ExperienceOverviewComponent, StickyScrollDirective, TimelineComponent, NgIf, NoteDirective ],
   templateUrl: './experiences.component.html',
   styleUrl: './experiences.component.scss'
 })
 export class ExperiencesComponent {
+  experiencesNote = $localize`:@@experiencesNote:experiences`
   selectedExperience? : Experience;
   timeline : ITimeline;
 

@@ -197,6 +197,10 @@ export class ExperiencesService {
 
   constructor() { }
 
+  public getAll() : Experience[] {
+    return this.experiences;
+  }
+
   public get(id: number) {
     let experience = this.experiences.find((experience: Experience) => experience.id == id);
 

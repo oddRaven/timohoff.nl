@@ -1,6 +1,6 @@
-<h2>Experiences</h2>
+<h2 appNote [noteText]="experiencesNote">Experiences</h2>
 
-<p>Below is a timeline of my education and work experiences.</p>
+<p i18n="@@experiencesParagraph">About experiences.</p>
 
 <app-timeline [timeline]="timeline" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
 <app-experience-overview *ngIf="selectExperience != null" [experience]="selectedExperience"></app-experience-overview>

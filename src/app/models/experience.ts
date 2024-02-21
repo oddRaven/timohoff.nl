@@ -4,7 +4,7 @@ import { IExperience } from '../experience-overview/iexperience';
 export class Experience implements IWaypoint, IExperience {
     id: number = 0;
     phaseIndex: number = 0;
-    imageSrc: string = '/assets/placeholder-square.jpg';
+    imageSrc: string = 'https://file.timohoff.nl/placeholder-square.jpg';
     isBound: boolean = true;
     title: string = '';
     description: string = '';

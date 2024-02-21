@@ -1,7 +1,9 @@
+<div class="selector" [@moveLeft]="{ value: state, params: { startPosition: startPosition, endPosition: endPosition } }"></div>
+
 <div class="phase" *ngFor="let phase of timeline.phases; index as phaseIndex">
     <div class="phase-title" [class]="['background-' + phase.color]">{{ phase.title }}</div>
     <div class="phase-content">
-        <div [class]="['waypoint', phaseIndex == 0 && waypointIndex == 0 ? 'first': '']" *ngFor="let waypoint of phase.waypoints; index as waypointIndex" (click)="select(waypoint)">
+        <div [class]="['waypoint', phaseIndex == 0 && waypointIndex == 0 ? 'first': '']" *ngFor="let waypoint of phase.waypoints; index as waypointIndex" (click)="select(waypoint)" (keyup.enter)="select(waypoint)">
             <div class="waypoint-title">{{ waypoint.title }}</div>
             <div class="waypoint-icon">
                 <img [src]="waypoint.imageSrc" [ngClass]="[waypoint.isBound ? 'border-' + phase.color : '']" tabindex="0" />
