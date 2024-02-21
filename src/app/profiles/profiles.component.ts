@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 
 import { ProfileComponent } from '../profile/profile.component'
 import { ProfileDescriptionComponent } from '../profile-description/profile-description.component'
-import { Profile } from '../profile/profile'
+import { Profile } from '../models/profile'
 import { ElementService } from '../element/element.service'
 
 @Component({

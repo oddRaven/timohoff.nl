@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Profile } from './profile'
+import { Profile } from '../models/profile'
 
 @Component({
   selector: 'app-profile',

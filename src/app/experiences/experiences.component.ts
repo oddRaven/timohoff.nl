@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 
-import { Experience } from './experience';
+import { Experience } from '../models/experience';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { ExperienceOverviewComponent } from '../experience-overview/experience-overview.component';
 import { ITimeline } from '../timeline/timeline';

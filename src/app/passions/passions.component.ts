@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Profile } from '../profile/profile'
+import { Profile } from '../models/profile'
 import { ProfilesComponent } from '../profiles/profiles.component'
 import { NoteDirective } from '../note/note.directive'
 

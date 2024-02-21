@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
-import { Experience } from '../experiences/experience';
+import { Experience } from '../models/experience';
 import { ExperiencesService } from '../services/experiences/experiences.service';
 import { ExperienceOverviewComponent } from '../experience-overview/experience-overview.component';
 

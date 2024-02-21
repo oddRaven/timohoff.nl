@@ -4,7 +4,7 @@
 
 <section>
     <header>
-        <img class="icon" [src]="experience.imageSrc"/>
+        <img class="icon" [src]="experience.imageSrc" [class]="[experience.color ? 'border-' + experience.color : '']"/>
         <h2 class="title">{{ experience.title }}</h2>
     </header>
 

@@ -10,6 +10,7 @@ export class Experience implements IWaypoint, IExperience {
     description: string = '';
     skills: string[] = [];
     location: string = '';
+    color: string = '';
 
     public constructor(init? : Partial<Experience>) {
         Object.assign(this, init);

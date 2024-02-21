@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Experience } from '../../experiences/experience'
+import { Experience } from '../../models/experience'
 import { Phase } from '../../timeline/phase'
 import { ITimeline, Timeline } from '../../timeline/timeline'
 
@@ -195,43 +195,19 @@ export class ExperiencesService {
     }),
   ];
 
-  phases : Phase[] = [
-    {
-      title: 'Elementary',
-      color: 'orange',
-      waypoints: []
-    },
-    {
-      title: 'Secondary',
-      color: 'red',
-      waypoints: []
-    },
-    {
-      title: 'MBO',
-      color: 'lime',
-      waypoints: []
-    },
-    {
-      title: 'HBO',
-      color: 'aqua',
-      waypoints: []
-    },
-    {
-      title: 'MediMapp',
-      color: 'c31e5f',
-      waypoints: []
-    },
-    {
-      title: 'Career transition',
-      color: 'grey',
-      waypoints: []
-    }
-  ];
-
   constructor() { }
 
   public get(id: number) {
-    return this.experiences.find((experience: Experience) => experience.id == id);
+    let experience = this.experiences.find((experience: Experience) => experience.id == id);
+
+    if (experience == null) {
+      return null;
+    }
+
+    let phases = this.getPhases();
+    experience.color = phases[experience.phaseIndex].color;
+
+    return experience;
   }
 
   public getTimeline() : ITimeline {

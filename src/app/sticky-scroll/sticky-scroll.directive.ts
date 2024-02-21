@@ -38,12 +38,20 @@ export class StickyScrollDirective implements AfterViewInit {
     const deltaScroll = currentScrollY - this.previousScrollY;
     const elementTop = element.getBoundingClientRect().top;
 
-    if (this.isUserScrolling == true &&
-    (elementTop < 40 && deltaScroll < 0
-    || elementTop > 40 && deltaScroll > 0)) {
+    if (this.isUserScrolling == false){
+      this.previousScrollY = currentScrollY;
+      return;
+    }
+
+    if (elementTop < 40 && deltaScroll < 0 || elementTop > 40 && deltaScroll > 0) {
       event.preventDefault();
       event.target.scrollTop = this.previousScrollY;
       window.scrollBy(0, deltaScroll);
+    }
+    else if(elementTop < 40 && deltaScroll > 0 || elementTop > 40 && deltaScroll < 0){
+      event.preventDefault();
+      this.previousScrollY = currentScrollY;
+      window.scrollBy(0, -deltaScroll);
     }
     else {
       this.previousScrollY = currentScrollY;

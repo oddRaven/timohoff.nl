@@ -34,6 +34,30 @@
                 box-sizing: border-box;
                 display: block;
                 background-color: #f3f0f3;
+
+                &.border-red {
+                    border-color: red;
+                }
+
+                &.border-orange {
+                    border-color: orange;
+                }
+
+                &.border-lime {
+                    border-color: lime;
+                }
+
+                &.border-grey {
+                    border-color: grey;
+                }
+
+                &.border-aqua {
+                    border-color: aqua;
+                }
+
+                &.border-c31e5f {
+                    border-color: #c31e5f;
+                }
             }
 
             .title {
