@@ -21,7 +21,7 @@ export class StickyScrollDirective implements AfterViewInit {
     }
 
     let element = this.elementRef.nativeElement;
-    element.style.height = window.screen.height - 40 + 'px';
+    element.style.height = window.innerHeight - 40 + 'px';
 
     element.onscroll = (event: any) => this.onScroll(event, element);
 

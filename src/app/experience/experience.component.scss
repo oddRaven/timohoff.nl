@@ -2,32 +2,46 @@
 
 :host {
     display: block;
-    background: $foreground-active-color;
 
     nav {
-        padding: 6px;
-        text-align: center;
-    }
-
-    header {
         display: flex;
-        padding: 8px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
 
-        .icon {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            border: .4em solid #808080;
-            box-sizing: border-box;
-            display: block;
-            background-color: #f3f0f3;
-        }
-
-        .title {
-            flex: 1;
+        a {
             display: flex;
+            height: 100%;
+            width: 150px;
             justify-content: center;
             align-items: center;
+        }
+    }
+
+    section{
+        background: $foreground-active-color;
+        padding: 5px;
+
+        header {
+            display: flex;
+            padding: 8px;
+
+            .icon {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                border: .4em solid #808080;
+                box-sizing: border-box;
+                display: block;
+                background-color: #f3f0f3;
+            }
+
+            .title {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }

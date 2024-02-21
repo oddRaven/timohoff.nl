@@ -58,6 +58,7 @@
     height: 170px;
     vertical-align: top;
     position: relative;
+    cursor: pointer;
 
     .waypoint-title {
         height: 60px;
@@ -73,7 +74,6 @@
         width: 100px;
         height: 100px;
         margin: 0px auto;
-        cursor: pointer;
         
         img {
             position: absolute;
@@ -120,6 +120,7 @@
         height: 6px;
         left: 62px;
         top: 110px;
+        pointer-events: none;
     }
 }
 

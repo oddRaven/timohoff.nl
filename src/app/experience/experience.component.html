@@ -1,10 +1,12 @@
 <nav>
-    <a routerLink="">Terug</a>
+    <a routerLink="" fragment="experiences">Terug</a>
 </nav>
 
-<header>
-    <img class="icon" [src]="experience.imageSrc"/>
-    <h2 class="title">{{ experience.title }}</h2>
-</header>
+<section>
+    <header>
+        <img class="icon" [src]="experience.imageSrc"/>
+        <h2 class="title">{{ experience.title }}</h2>
+    </header>
 
-<app-experience-overview [experience]="experience"></app-experience-overview>
+    <app-experience-overview [experience]="experience"></app-experience-overview>
+</section>
