@@ -85,6 +85,7 @@
             box-sizing: border-box;
             display: block;
             background-color: #f3f0f3;
+            user-select: none;
 
             &.border-red {
                 border-color: red;

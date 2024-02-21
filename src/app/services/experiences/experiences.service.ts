@@ -236,12 +236,47 @@ export class ExperiencesService {
 
   public getTimeline() : ITimeline {
     let timeline : ITimeline = new Timeline();
-    timeline.phases = this.phases;
+    timeline.phases = this.getPhases();
 
     for (let experience of this.experiences) {
       timeline.phases[experience.phaseIndex].waypoints.push(experience);
     }
 
     return timeline;
+  }
+
+  private getPhases() : Phase[] {
+    return[
+      {
+        title: 'Elementary',
+        color: 'orange',
+        waypoints: []
+      },
+      {
+        title: 'Secondary',
+        color: 'red',
+        waypoints: []
+      },
+      {
+        title: 'MBO',
+        color: 'lime',
+        waypoints: []
+      },
+      {
+        title: 'HBO',
+        color: 'aqua',
+        waypoints: []
+      },
+      {
+        title: 'MediMapp',
+        color: 'c31e5f',
+        waypoints: []
+      },
+      {
+        title: 'Career transition',
+        color: 'grey',
+        waypoints: []
+      }
+    ];
   }
 }

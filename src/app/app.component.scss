@@ -64,9 +64,12 @@ app-pop-up {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: $main-width + $extra-width;
     margin: 0px auto;
     position: relative;
+    min-height: 100%;
 }
 
 .mobile-header-spacing {
@@ -76,12 +79,15 @@ app-pop-up {
 
 .main {
     margin-left: $extra-width;
+    flex: 1;
 }
 
 footer {
     font-size: .75rem;
-    text-align: center;
-    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
 }
 
 @media (max-width: $mobile-width) {
