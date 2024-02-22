@@ -1,0 +1,25 @@
+@import '../shared/variables';
+
+:host {
+    display: block;
+
+    &.active .content {
+        background: $foreground-active-color;
+    }
+
+    .content {
+        padding: 5px;
+        background: $foreground-color;
+        border-radius: 2px;
+        display: block;
+
+        .h2-wrapper {
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        p {
+            margin: 10px 0px;
+        }
+    }
+}
