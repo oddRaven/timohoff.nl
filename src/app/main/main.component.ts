@@ -18,6 +18,14 @@ import { ScrollActiveDirective } from '../scroll-active/scroll-active.directive'
 })
 export class MainComponent implements OnInit{
   offset: number = 0;
+
+  aboutTitle = $localize`:@@about:About`;
+  contactTitle = $localize`:@@contact:Contact`;
+  experiencesTitle = $localize`:@@experiences:Experiences`;
+  passionsTitle = $localize`:@@passions:Passions`;
+  teamTitle = $localize`:@@team:Team`;
+  websiteTitle = $localize`:@@website:Website`;
+
   aboutNote = $localize`:@@aboutNote:about`;
   experiencesNote = $localize`:@@experiencesNote:experiences`;
   teamNote = $localize`:@@teamNote:team`;

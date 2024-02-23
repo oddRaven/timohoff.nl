@@ -37,7 +37,7 @@ export class ScrollActiveDirective implements OnInit {
         elements.forEach((element) => element.classList.add('active'));
       }
     }
-    else if (this.elementRef.nativeElement.classList.contains('active')) {
+    else {
       this.elementRef.nativeElement.classList.remove('active');
 
       elements.forEach((element) => element.classList.remove('active'));

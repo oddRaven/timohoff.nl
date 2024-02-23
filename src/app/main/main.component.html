@@ -1,20 +1,20 @@
 <div>
-    <app-main-section h2="About" [noteText]="aboutNote" appScrollActive selector=".scroll-active-about" [offset]="offset">
+    <app-main-section id="about" [h2Text]="aboutTitle" [noteText]="aboutNote" appScrollActive selector=".scroll-active-about" [offset]="offset">
         <p i18n="@@aboutParagraph">About</p>
     </app-main-section>
-    <app-main-section h2="Team" [noteText]="teamNote" appScrollActive selector=".scroll-active-team" [offset]="offset">
-        <app-team id="team" class="content"></app-team>
+    <app-main-section id="team" [h2Text]="teamTitle" [noteText]="teamNote" appScrollActive selector=".scroll-active-team" [offset]="offset">
+        <app-team></app-team>
     </app-main-section>
-    <app-main-section h2="Experiences" [noteText]="teamNote" appScrollActive selector=".scroll-active-experiences" [offset]="offset">
-        <app-experiences id="experiences" class="content"></app-experiences>
+    <app-main-section id="experiences" [h2Text]="experiencesTitle" [noteText]="teamNote" appScrollActive selector=".scroll-active-experiences" [offset]="offset">
+        <app-experiences></app-experiences>
     </app-main-section>
-    <app-main-section h2="Passions" appScrollActive selector=".scroll-active-passions" [offset]="offset">
-        <app-passions id="passions" class="content"></app-passions>
+    <app-main-section id="passions" [h2Text]="passionsTitle" appScrollActive selector=".scroll-active-passions" [offset]="offset">
+        <app-passions></app-passions>
     </app-main-section>
-    <app-main-section h2="Website" appScrollActive selector=".scroll-active-website" [offset]="offset">
-        <app-website id="website" class="content"></app-website>
+    <app-main-section id="website" [h2Text]="websiteTitle" appScrollActive selector=".scroll-active-website" [offset]="offset">
+        <app-website></app-website>
     </app-main-section>
-    <app-main-section h2="Contact" appScrollActive selector=".scroll-active-contact" [offset]="offset">
-        <app-contact id="contact" class="content"></app-contact>
+    <app-main-section id="contact" [h2Text]="contactTitle" appScrollActive selector=".scroll-active-contact" [offset]="offset">
+        <app-contact></app-contact>
     </app-main-section>
 </div>

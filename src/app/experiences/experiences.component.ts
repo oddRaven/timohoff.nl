@@ -33,7 +33,7 @@ export class ExperiencesComponent {
   public selectExperience (waypoint : IWaypoint) {
     this.selectedExperience = waypoint as Experience;
 
-    if(window.screen.width <= 500)
+    if(window.innerWidth <= 500)
     {
       this.router.navigate(['experience', this.selectedExperience.id]);
     }

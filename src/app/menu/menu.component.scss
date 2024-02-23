@@ -1,9 +1,5 @@
 @import '../shared/variables';
 
-a.active {
-    color: $important-active-color;
-}
-
 menu {
     list-style: none;
     padding: 0px;
@@ -13,6 +9,19 @@ menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0px;
+
+    li {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        padding: 5px 0px;
+
+        &.active {
+            color: $important-active-color;
+        }
+    }
 }
 
 @media (max-width: $mobile-width) {

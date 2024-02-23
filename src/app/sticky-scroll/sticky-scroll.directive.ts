@@ -16,7 +16,7 @@ export class StickyScrollDirective implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (isPlatformServer(this.platformId) || window.screen.width > 500) {
+    if (isPlatformServer(this.platformId) || window.innerWidth > 500) {
       return;
     }
 

@@ -10,6 +10,6 @@ import { NoteDirective } from '../note/note.directive';
   styleUrl: './main-section.component.scss'
 })
 export class MainSectionComponent {
-  @Input() h2?: string;
+  @Input() h2Text?: string;
   @Input() noteText?: string;
 }

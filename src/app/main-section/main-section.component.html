@@ -1,11 +1,11 @@
 <div class="content">
-    @if (h2 != null) {
+    @if (h2Text != null) {
         <div class="h2-wrapper">
             @if (noteText != null) {
-                <h2 appNote [noteText]="noteText">{{ h2 }}</h2>
+                <h2 appNote [noteText]="noteText">{{ h2Text }}</h2>
             }
             @else {
-                <h2>{{ h2 }}</h2>
+                <h2>{{ h2Text }}</h2>
             }
         </div>
     }

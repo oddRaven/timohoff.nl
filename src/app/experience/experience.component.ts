@@ -20,7 +20,7 @@ export class ExperienceComponent implements OnInit {
     private experiencesService: ExperiencesService,
     private router: Router
   ) {
-    if(window.screen.width > 500)
+    if(window.innerWidth > 500)
     {
       this.router.navigate(['']);
     }
