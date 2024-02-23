@@ -19,7 +19,6 @@ import { NoteDirective } from '../note/note.directive'
   styleUrl: './experiences.component.scss'
 })
 export class ExperiencesComponent {
-  experiencesNote = $localize`:@@experiencesNote:experiences`
   selectedExperience? : Experience;
   timeline : ITimeline;
 

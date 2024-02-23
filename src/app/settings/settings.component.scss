@@ -1,0 +1,54 @@
+:host {
+    position: relative;
+    user-select: none;
+    
+    .gear {
+        cursor: pointer;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url('https://file.timohoff.nl/gear-64.png');
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0px auto;
+    }
+
+    .popover {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        left: 10px;
+        width: 250px;
+        background: white;
+        display: none;
+        border: 1px solid lightgrey;
+
+        &.active {
+            display: block;
+        }
+
+        .setting {
+            padding: 5px;
+
+            header {
+                font-weight: bold;
+                text-align: left;
+                padding: 5px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    :host {
+        .gear {
+            float: right;
+        }
+
+        .popover {
+            left: unset;
+        }
+    }
+}

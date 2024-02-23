@@ -3,7 +3,6 @@
 :host {
     position: relative;
     background: $background-color;
-    padding: 0px 5px;
     text-align: left;
 }
 
@@ -26,8 +25,17 @@ app-language-selector{
     }
 }
 
-.h1-container a {
-    text-decoration: inherit;
+.h1-container
+{
+    display: inline-block;
+    position: relative;
+
+    h1 {
+        text-decoration: inherit;
+        padding: 10px 3px;
+        margin: 0px;
+        display: inline-block;
+    }
 }
 
 @media (max-width: $mobile-width) {
@@ -35,13 +43,18 @@ app-language-selector{
         display: flex;
 
         .h1-container {
-            width: 60px;
+            width: 40px;
             text-align: left;
+            margin-right: 30px;
 
             h1 {
                 width: 30px;
+                height: 100%;
                 font-size: .75rem;
                 text-align: center;
+                padding: 0px 5px;
+                display: flex;
+                align-items: center;
             }
         }
 
@@ -50,6 +63,10 @@ app-language-selector{
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        app-settings {
+            width: 60px;
         }
     }
 }

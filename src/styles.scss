@@ -25,7 +25,6 @@ header {
 h1, h2, h3 {
     display: inline;
     position: relative;
-    margin: 5px 0px;
 }
 
 h1 {
@@ -34,6 +33,7 @@ h1 {
 
 h2, h3 {
     font-size: 1.125rem;
+    margin: 5px 0px;
 }
 
 h4 {
@@ -85,7 +85,7 @@ a:hover, [routerLink]:hover {
     &.position-fixed {
         position: fixed;
         left: 0px;
-        z-index: 1;
+        z-index: 5;
 
         .note {
             display: inline-block;

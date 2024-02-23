@@ -1,4 +1,6 @@
-<app-language-selector appNote [noteText]="flagsNote" [isPositionFixed]="true"></app-language-selector>
+<div class="h1-container" appNote [noteText]="wipNote" [isPositionFixed]="true">
+    <h1 routerLink fragment="about">Timo Hoff</h1>
+</div>
 <div class="mobile-headings" (click)="openMobileMenu()">
     <div class="mobile-heading scroll-active-about" i18n="@@about">About</div>
     <div class="mobile-heading scroll-active-team" i18n="@@team">Team</div>
@@ -7,6 +9,4 @@
     <div class="mobile-heading scroll-active-passions" i18n="@@passions">Passions</div>
     <div class="mobile-heading scroll-active-website" i18n="@@website">Website</div>
 </div>
-<div class="h1-container">
-    <h1 routerLink fragment="about" appNote [noteText]="wipNote" [isPositionFixed]="true">Timo Hoff</h1>
-</div>
+<app-settings></app-settings>
