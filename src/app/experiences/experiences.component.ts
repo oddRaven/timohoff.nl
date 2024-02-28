@@ -7,7 +7,7 @@ import { TimelineComponent } from '../timeline/timeline.component';
 import { ExperienceOverviewComponent } from '../experience-overview/experience-overview.component';
 import { ITimeline } from '../timeline/timeline';
 import { IWaypoint } from '../timeline/waypoint';
-import { ExperiencesService } from '../services/experiences/experiences.service';
+import { TimelineService } from '../services/timeline/timeline.service';
 import { StickyScrollDirective } from '../sticky-scroll/sticky-scroll.directive';
 import { NoteDirective } from '../note/note.directive'
 
@@ -20,13 +20,15 @@ import { NoteDirective } from '../note/note.directive'
 })
 export class ExperiencesComponent {
   selectedExperience? : Experience;
-  timeline : ITimeline;
+  timeline? : ITimeline;
 
   constructor (
-    private experiencesService: ExperiencesService,
+    private timelineService: TimelineService,
     private router: Router)
   {
-    this.timeline = this.experiencesService.getTimeline();
+    this.timelineService
+      .get(1)
+      .then((timeline) => this.timeline = timeline);
   }
 
   public selectExperience (waypoint : IWaypoint) {

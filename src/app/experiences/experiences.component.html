@@ -1,4 +1,6 @@
 <p i18n="@@experiencesParagraph">About experiences.</p>
 
-<app-timeline [timeline]="timeline" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
-<app-experience-overview *ngIf="selectExperience != null" [experience]="selectedExperience"></app-experience-overview>
+@if(timeline){
+    <app-timeline [timeline]="timeline" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
+    <app-experience-overview *ngIf="selectExperience != null" [experience]="selectedExperience"></app-experience-overview>
+}

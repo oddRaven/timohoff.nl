@@ -1,5 +1,5 @@
 export interface IWaypoint {
-    imageSrc: string;
-    isBound: boolean;
+    image_source: string;
+    is_bound: boolean;
     title: string;
 }

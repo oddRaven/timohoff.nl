@@ -16,6 +16,8 @@
         </div>
     </div>
     <div class='description outer'>
-        <p class="inner">{{ experience.description }}</p>
+        @if (experience.article) {
+            <p class="inner">{{ experience.article.text }}</p>
+        }
     </div>
 }
