@@ -3,18 +3,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
-import { Experience } from '../../models/experience';
+import { ISection } from '../../models/section';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExperienceService {
-  private apiExperienceUrl : string = `${environment.apiUrl}/waypoint`;
+export class SectionService {
+  private apiSectionUrl : string = `${environment.apiUrl}/section`;
 
   constructor(private httpClient : HttpClient) { }
 
-  public get(id: number) : Promise<Experience> {
-    let url = `${this.apiExperienceUrl}/${id}`;
+  public getAll() : Promise<ISection[]> {
     let options = {
       headers: new HttpHeaders({
         'Content-Language': $localize.locale as string
@@ -22,6 +21,6 @@ export class ExperienceService {
     };
 
     return lastValueFrom(this.httpClient
-      .get<Experience>(url, options));
+      .get<ISection[]>(this.apiSectionUrl, options));
   }
 }

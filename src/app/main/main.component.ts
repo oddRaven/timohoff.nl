@@ -8,6 +8,8 @@ import { PassionsComponent } from '../passions/passions.component';
 import { WebsiteComponent } from '../website/website.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ScrollActiveDirective } from '../scroll-active/scroll-active.directive';
+import { SectionService } from '../services/section/section.service';
+import { ISection } from '../models/section';
 
 @Component({
   selector: 'app-main',
@@ -18,6 +20,7 @@ import { ScrollActiveDirective } from '../scroll-active/scroll-active.directive'
 })
 export class MainComponent implements OnInit{
   offset: number = 0;
+  sections: ISection[] = [];
 
   aboutTitle = $localize`:@@about:About`;
   contactTitle = $localize`:@@contact:Contact`;
@@ -31,8 +34,13 @@ export class MainComponent implements OnInit{
   teamNote = $localize`:@@teamNote:team`;
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object
-  ){}
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private sectionService: SectionService,
+  ){
+    sectionService
+      .getAll()
+      .then((sections: ISection[]) => this.sections = sections);
+  }
 
   ngOnInit(): void {
     this.initializeOffset();

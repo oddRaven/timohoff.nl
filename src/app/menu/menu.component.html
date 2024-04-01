@@ -1,8 +1,5 @@
 <menu>
-    <li routerLink fragment="about" class="scroll-active-about" i18n="@@about">About</li>
-    <li routerLink fragment="team" class="scroll-active-team" i18n="@@team">Team</li>
-    <li routerLink fragment="experiences" class="scroll-active-experiences" i18n="@@experiences">Experiences</li>
-    <li routerLink fragment="passions" class="scroll-active-passions" i18n="@@passions">Passions</li>
-    <li routerLink fragment="website" class="scroll-active-website" i18n="@@website">Website</li>
-    <li routerLink fragment="contact" class="scroll-active-contact" i18n="@@contact">Contact</li>
+    @for (section of sections; track $index){
+        <li routerLink [fragment]="section.title" [class]="'scroll-active-' + section.title">{{ section.title }}</li>
+    }
 </menu>
