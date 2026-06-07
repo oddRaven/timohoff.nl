@@ -38,7 +38,7 @@ export class MainComponent implements OnInit{
     private sectionService: SectionService,
   ){
     sectionService
-      .getAll()
+      .getAllWithItems()
       .then((sections: ISection[]) => this.sections = sections);
   }
 

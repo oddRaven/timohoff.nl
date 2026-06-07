@@ -15,8 +15,6 @@ import { PopUpService } from '../services/pop-up/pop-up.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  wipNote = $localize`:@@wipNote:wip`
-
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private popUpService: PopUpService)

@@ -1,7 +1,9 @@
 <div>
     @for (section of sections; track $index) {
         <app-main-section [id]='section.title' [h2Text]="section.title" appScrollActive [selector]="'.scroll-active-' + section.title" [offset]="offset">
-            <p>This is a paragraph.</p>
+            @for (item of section.items; track $index) {
+                <p>{{item.article?.text}}</p>
+            }
         </app-main-section>
     }
 </div>

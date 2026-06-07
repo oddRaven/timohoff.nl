@@ -23,4 +23,17 @@ export class SectionService {
     return lastValueFrom(this.httpClient
       .get<ISection[]>(this.apiSectionUrl, options));
   }
+
+  public getAllWithItems() : Promise<ISection[]> {
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Language': $localize.locale as string
+      })
+    };
+
+    let url = `${this.apiSectionUrl}?include_section_items`;
+
+    return lastValueFrom(this.httpClient
+      .get<ISection[]>(url, options));
+  }
 }
