@@ -2,7 +2,12 @@
     @for (section of sections; track $index) {
         <app-main-section [id]='section.title' [h2Text]="section.title" appScrollActive [selector]="'.scroll-active-' + section.title" [offset]="offset">
             @for (item of section.items; track $index) {
-                <p>{{item.article?.text}}</p>
+                @if (item.article) {
+                    <p>{{item.article.text}}</p>
+                }
+                @else if (item.profiles) {
+                    <app-profiles [profiles]="item.profiles"></app-profiles>
+                }
             }
         </app-main-section>
     }

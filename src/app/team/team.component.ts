@@ -16,23 +16,23 @@ export class TeamComponent {
     {
       imageUrl: 'https://file.timohoff.nl/mozes.jpg',
       imageAlt: $localize`:@@mozesAlt:alt`,
-      name: 'Mozes',
+      title: 'Mozes',
       emoji: '',
-      description: $localize`:@@mozesDescription:description`
+      text: $localize`:@@mozesDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/timo.jpg',
       imageAlt: $localize`:@@timoAlt:alt`,
-      name: 'Timo',
+      title: 'Timo',
       emoji: '',
-      description: $localize`:@@timoDescription:description`
+      text: $localize`:@@timoDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/aiko.jpg',
       imageAlt: $localize`:@@aikoAlt:alt`,
-      name: 'Aiko',
+      title: 'Aiko',
       emoji: '',
-      description: $localize`:@@aikoDescription:description`
+      text: $localize`:@@aikoDescription:description`
     }
   ];
 }

@@ -16,58 +16,58 @@ export class PassionsComponent {
     {
       imageUrl: 'https://file.timohoff.nl/zwembad-de-kwakel.jpg',
       imageAlt: $localize`:@@swimmingAlt:alt`,
-      name: $localize`:@@Swimming:Swimming`,
+      title: $localize`:@@Swimming:Swimming`,
       emoji: '🏊‍♂️',
-      description: $localize`:@@swimmingDescription:description`
+      text: $localize`:@@swimmingDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/van-gogh-the-sower.jpg',
       imageAlt: $localize`:@@paintingAlt:alt`,
-      name: $localize`:@@Painting:Painting`,
+      title: $localize`:@@Painting:Painting`,
       emoji: '🎨',
-      description: $localize`:@@paintingDescription:description`
+      text: $localize`:@@paintingDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/bricks.jpg',
       imageAlt: $localize`:@@legoAlt:alt`,
-      name: $localize`:@@Lego_design:Lego design`,
+      title: $localize`:@@Lego_design:Lego design`,
       emoji: '👷‍♂️',
-      description: $localize`:@@legoDescription:description`
+      text: $localize`:@@legoDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/earth.jpg',
       imageAlt: $localize`:@@geopoliticsAlt:alt`,
-      name: $localize`:@@Geopolitics:Geopolitics`,
+      title: $localize`:@@Geopolitics:Geopolitics`,
       emoji: '🌍',
-      description: $localize`:@@geopoliticsDescription:description`
+      text: $localize`:@@geopoliticsDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/ancient-rome-model.jpg',
       imageAlt: $localize`:@@historyAlt:alt`,
-      name: $localize`:@@History:History`,
+      title: $localize`:@@History:History`,
       emoji: '📜',
-      description: $localize`:@@historyDescription:description`
+      text: $localize`:@@historyDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/c-sharp.png',
       imageAlt: $localize`:@@gameEnginesAlt:alt`,
-      name: $localize`:@@Game_engines:Game engines`,
+      title: $localize`:@@Game_engines:Game engines`,
       emoji: '💻‍',
-      description: $localize`:@@gameEnginesDescription:description`
+      text: $localize`:@@gameEnginesDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/beer.png',
       imageAlt: $localize`:@@drinksAlt:alt`,
-      name: $localize`:@@Drinks:Drinks`,
+      title: $localize`:@@Drinks:Drinks`,
       emoji: '🍻',
-      description: $localize`:@@drinksDescription:description`
+      text: $localize`:@@drinksDescription:description`
     },
     {
       imageUrl: 'https://file.timohoff.nl/lost-in-random.png',
       imageAlt: $localize`:@@gamingAlt:alt`,
-      name: $localize`:@@Video_games:Video games`,
+      title: $localize`:@@Video_games:Video games`,
       emoji: '🕹️',
-      description: $localize`:@@gamingDescription:description`
+      text: $localize`:@@gamingDescription:description`
     }
   ];
 }

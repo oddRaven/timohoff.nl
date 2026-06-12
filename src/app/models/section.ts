@@ -1,4 +1,5 @@
 import { Article } from "./article";
+import { Profile } from "./profile";
 
 export interface ISection {
     id? : number;
@@ -15,4 +16,5 @@ export class Section implements ISection {
 export interface ISectionItem {
     id? : number;
     article? : Article;
+    profiles? : Profile[];
 }

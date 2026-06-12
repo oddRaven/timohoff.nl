@@ -63,7 +63,7 @@ export class ProfilesComponent {
     let lastProfileIndex = profileElements.indexOf(lastProfileElement);
 
     this.componentRef = profileViewsArr[lastProfileIndex].createComponent(ProfileDescriptionComponent);
-    this.componentRef.instance.description = this.profiles[selectedIndex].description;
+    this.componentRef.instance.description = this.profiles[selectedIndex].text;
 
     profileElement?.classList.add('active');
   }

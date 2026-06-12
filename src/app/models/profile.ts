@@ -1,7 +1,7 @@
 export interface Profile {
   imageUrl: string;
   imageAlt: string;
-  name: string;
+  title: string;
   emoji: string;
-  description: string;
+  text: string;
 }
