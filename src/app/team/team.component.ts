@@ -14,22 +14,19 @@ import { NoteDirective } from '../note/note.directive';
 export class TeamComponent {
   profiles : Profile[] = [
     {
-      imageUrl: 'https://file.timohoff.nl/mozes.jpg',
-      imageAlt: $localize`:@@mozesAlt:alt`,
+      image_name: 'mozes.jpg',
       title: 'Mozes',
       emoji: '',
       text: $localize`:@@mozesDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/timo.jpg',
-      imageAlt: $localize`:@@timoAlt:alt`,
+      image_name: 'timo.jpg',
       title: 'Timo',
       emoji: '',
       text: $localize`:@@timoDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/aiko.jpg',
-      imageAlt: $localize`:@@aikoAlt:alt`,
+      image_name: 'aiko.jpg',
       title: 'Aiko',
       emoji: '',
       text: $localize`:@@aikoDescription:description`

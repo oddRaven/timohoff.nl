@@ -14,57 +14,49 @@ import { NoteDirective } from '../note/note.directive'
 export class PassionsComponent {
   profiles : Profile[] = [
     {
-      imageUrl: 'https://file.timohoff.nl/zwembad-de-kwakel.jpg',
-      imageAlt: $localize`:@@swimmingAlt:alt`,
+      image_name: 'zwembad-de-kwakel.jpg',
       title: $localize`:@@Swimming:Swimming`,
       emoji: '🏊‍♂️',
       text: $localize`:@@swimmingDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/van-gogh-the-sower.jpg',
-      imageAlt: $localize`:@@paintingAlt:alt`,
+      image_name: 'van-gogh-the-sower.jpg',
       title: $localize`:@@Painting:Painting`,
       emoji: '🎨',
       text: $localize`:@@paintingDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/bricks.jpg',
-      imageAlt: $localize`:@@legoAlt:alt`,
+      image_name: 'bricks.png',
       title: $localize`:@@Lego_design:Lego design`,
       emoji: '👷‍♂️',
       text: $localize`:@@legoDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/earth.jpg',
-      imageAlt: $localize`:@@geopoliticsAlt:alt`,
+      image_name: 'earth.png',
       title: $localize`:@@Geopolitics:Geopolitics`,
       emoji: '🌍',
       text: $localize`:@@geopoliticsDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/ancient-rome-model.jpg',
-      imageAlt: $localize`:@@historyAlt:alt`,
+      image_name: 'ancient-rome-model.png',
       title: $localize`:@@History:History`,
       emoji: '📜',
       text: $localize`:@@historyDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/c-sharp.png',
-      imageAlt: $localize`:@@gameEnginesAlt:alt`,
+      image_name: 'c-sharp.png',
       title: $localize`:@@Game_engines:Game engines`,
       emoji: '💻‍',
       text: $localize`:@@gameEnginesDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/beer.png',
-      imageAlt: $localize`:@@drinksAlt:alt`,
+      image_name: 'beer.png',
       title: $localize`:@@Drinks:Drinks`,
       emoji: '🍻',
       text: $localize`:@@drinksDescription:description`
     },
     {
-      imageUrl: 'https://file.timohoff.nl/lost-in-random.png',
-      imageAlt: $localize`:@@gamingAlt:alt`,
+      image_name: 'lost-in-random.png',
       title: $localize`:@@Video_games:Video games`,
       emoji: '🕹️',
       text: $localize`:@@gamingDescription:description`

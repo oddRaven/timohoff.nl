@@ -16,6 +16,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "baseUrl": ".",
     "target": "ESnext",
     "module": "ESnext",
     "useDefineForClassFields": false,

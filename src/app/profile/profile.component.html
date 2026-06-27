@@ -1,14 +1,20 @@
 @if (profile != null) {
-    @if (profile.imageUrl != null && profile.imageUrl != '') {
-        <img [src]="profile.imageUrl" [alt]="profile.imageAlt" class='profile' tabindex="0" />
-    }
-    @else if (profile.emoji != null && profile.emoji != '') {
-        <div class='profile'>
-            <p class="emoji">{{ profile.emoji }}️</p>
-        </div>
-    }
-    @else {
-        <img src="https://file.timohoff.nl/placeholder-square.jpg" alt="Placeholder." class='profile' tabindex="0" />
-    }
+    <div
+        class="image-container"
+        [class.no-text]="profile.text == null || profile.text.trim() === ''"
+        tabindex="0"
+    >
+        @if (profile.image_name != null && profile.image_name.trim() != '') {
+            <img [src]="'https://file.timohoff.nl/' + profile.image_name" [alt]="profile.title" class='image' />
+        }
+        @else if (profile.emoji != null && profile.emoji != '') {
+            <div class='image'>
+                <p class="emoji">{{ profile.emoji }}️</p>
+            </div>
+        }
+        @else {
+            <img src="./assets/image-not-found.png" alt="Placeholder." class='image' />
+        }
+    </div>
     <span>{{ profile.title }}</span>
 }

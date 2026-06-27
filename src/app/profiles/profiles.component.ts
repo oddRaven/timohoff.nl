@@ -39,7 +39,11 @@ export class ProfilesComponent {
       this.toDestroyComponentRef = this.componentRef;
     }
 
-    if (event.target == null) {
+    if (
+      event.target == null ||
+      profile.text == null ||
+      profile.text.trim() == ''
+    ) {
       return;
     }
 
@@ -59,11 +63,10 @@ export class ProfilesComponent {
     let lastProfileElement = this.elementService.getLastFromRow(profileElement);
 
     let profileElements = Array.from(this.elementRef.nativeElement.querySelectorAll('app-profile'));
-    let selectedIndex = profileElements.indexOf(profileElement);
     let lastProfileIndex = profileElements.indexOf(lastProfileElement);
 
     this.componentRef = profileViewsArr[lastProfileIndex].createComponent(ProfileDescriptionComponent);
-    this.componentRef.instance.description = this.profiles[selectedIndex].text;
+    this.componentRef.instance.description = profile.text;
 
     profileElement?.classList.add('active');
   }

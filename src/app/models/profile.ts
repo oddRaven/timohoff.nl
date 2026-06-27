@@ -1,6 +1,5 @@
 export interface Profile {
-  imageUrl: string;
-  imageAlt: string;
+  image_name: string;
   title: string;
   emoji: string;
   text: string;

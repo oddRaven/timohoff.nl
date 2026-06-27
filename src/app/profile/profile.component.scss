@@ -8,25 +8,32 @@
     border: 3px solid #fff;
   }
 
-  .profile {
-    border-radius: 10px;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    object-position: 15% 0;
-    display: flex;
-    margin: 5px auto;
-    background: $background-color;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+  .image-container {
     cursor: pointer;
 
-    .emoji {
-      font-size: 100px;
-      height: 100px;
-      margin: 0px;
-      line-height: 1.1em;
+    &.no-text {
+      cursor: default;
+    }
+
+    .image {
+      border-radius: 10px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: 15% 0;
+      display: flex;
+      margin: 5px auto;
+      background: $background-color;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+
+      .emoji {
+        font-size: 100px;
+        height: 100px;
+        margin: 0px;
+        line-height: 1.1em;
+      }
     }
   }
 }
