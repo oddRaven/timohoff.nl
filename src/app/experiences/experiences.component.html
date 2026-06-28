@@ -2,5 +2,7 @@
 
 @if(timeline){
     <app-timeline [timeline]="timeline" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
-    <app-experience-overview *ngIf="selectExperience != null" [experience]="selectedExperience"></app-experience-overview>
+    @if (selectExperience != null) {
+        <app-experience-overview [experience]="selectedExperience"></app-experience-overview>
+    }
 }

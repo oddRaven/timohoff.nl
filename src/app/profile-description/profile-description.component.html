@@ -1,1 +1,3 @@
-<p @fade *ngIf="visible">{{ description }}</p>
+@if (visible) {
+	<p @fade>{{ description }}</p>
+}

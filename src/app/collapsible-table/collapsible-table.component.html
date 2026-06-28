@@ -12,17 +12,19 @@
         <tbody>
             @for (item of flatItems; track $index) {
                 <tr [ngClass]="[item.class, item.isHidden ? 'display-none': '']">
-                    <td *ngIf="item.subItems.length != 0; else noCollapse" class='cursor-pointer' (click)="itemClick(item)" (keydown.enter)="itemClick(item)" tabindex="0">
-                        @if (item.subItems[0].isHidden) {
-                            &nbsp;&#9660;&nbsp;
-                        }
-                        @else {
-                            &nbsp;&#9654;&nbsp;
-                        }
-                    </td>
-                    <ng-template #noCollapse>
+                    @if (item.subItems.length != 0) {
+                        <td class='cursor-pointer' (click)="itemClick(item)" (keydown.enter)="itemClick(item)" tabindex="0">
+                            @if (item.subItems[0].isHidden) {
+                                &nbsp;&#9660;&nbsp;
+                            }
+                            @else {
+                                &nbsp;&#9654;&nbsp;
+                            }
+                        </td>
+                    }
+                    @else {
                         <td class="cursor-default">&nbsp;&nbsp;&nbsp;</td>
-                    </ng-template>
+                    }
 
                     @for (cell of item.cells; track $index) {
                         <td>{{ cell }}</td>
