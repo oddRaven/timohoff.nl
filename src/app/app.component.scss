@@ -1,4 +1,4 @@
-@import './shared/variables';
+@use './shared/variables';
 
 $main-width: 1000px;
 $extra-width: 120px;
@@ -13,7 +13,7 @@ app-pop-up {
     z-index: 10;
 
     app-menu {
-        background: $background-color;
+        background: variables.$background-color;
         border: 1px solid black;
     }
 
@@ -35,7 +35,7 @@ app-pop-up {
     font-family: "Roboto", sans-serif;
     border-radius: 0px 0px 0px 4px;
     padding: 2px;
-    background: $background-color;
+    background: variables.$background-color;
 
     &:focus-within {
         top: 0px;
@@ -74,7 +74,7 @@ app-pop-up {
 
 .mobile-header-spacing {
     display: none;
-    height: $header-height;
+    height: variables.$header-height;
 }
 
 .main {
@@ -90,7 +90,7 @@ footer {
     height: 22px;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: variables.$mobile-width) {
     .mobile-header-spacing {
         display: block;
     }
@@ -113,6 +113,6 @@ footer {
         left: 0px;
         top: 0px;
         width: 100%;
-        height: $header-height;
+        height: variables.$header-height;
     }
 }

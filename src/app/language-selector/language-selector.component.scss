@@ -1,4 +1,4 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 .box {
     flex: 1;
@@ -10,7 +10,7 @@
     padding: 0 10px;
 
     &.active {
-        background: $foreground-active-color;
+        background: variables.$foreground-active-color;
     }
 
     .language {

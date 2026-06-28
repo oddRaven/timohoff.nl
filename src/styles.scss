@@ -1,9 +1,9 @@
-@import './app/shared/variables';
+@use './app/shared/variables';
 
 html, body {
     margin: 0px;
     padding: 0px;
-    background: $background-color;
+    background: variables.$background-color;
     height: 100%;
 }
 
@@ -47,12 +47,12 @@ div, p{
 
 a, [routerLink] {
     text-decoration: none;
-    color: $important-passive-color;
+    color: variables.$important-passive-color;
     cursor: pointer;
 }
 
 a:hover, [routerLink]:hover {
-    color: $important-active-color;
+    color: variables.$important-active-color;
 }
 
 .note-lightbulb {
@@ -91,8 +91,8 @@ a:hover, [routerLink]:hover {
             display: inline-block;
         }
 
-        @media (max-width: $mobile-width) {
-            top: $header-height;
+        @media (max-width: variables.$mobile-width) {
+            top: variables.$header-height;
         }
     }
 }
@@ -124,14 +124,14 @@ app-profiles {
 }
 
 .important-active-color {
-    color: $important-active-color;
+    color: variables.$important-active-color;
 }
 
 .important-passive-color {
-    color: $important-passive-color;
+    color: variables.$important-passive-color;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: variables.$mobile-width) {
     body {
         margin: 0px;
     }

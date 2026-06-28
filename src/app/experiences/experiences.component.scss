@@ -1,10 +1,10 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 app-timeline {
     padding-bottom: 6px;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: variables.$mobile-width) {
     app-experience-overview {
         display: none;
     }

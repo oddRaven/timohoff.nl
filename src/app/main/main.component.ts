@@ -1,4 +1,4 @@
-import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject, signal } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 
 import { MainSectionComponent } from '../main-section/main-section.component';
@@ -21,7 +21,7 @@ import { ISection } from '../models/section';
 })
 export class MainComponent implements OnInit{
   offset: number = 0;
-  sections: ISection[] = [];
+  sections = signal<ISection[]>([]);
 
   aboutTitle = $localize`:@@about:About`;
   contactTitle = $localize`:@@contact:Contact`;
@@ -38,13 +38,19 @@ export class MainComponent implements OnInit{
     @Inject(PLATFORM_ID) private platformId: Object,
     private sectionService: SectionService,
   ){
-    sectionService
-      .getAllWithItems()
-      .then((sections: ISection[]) => this.sections = sections);
   }
 
   ngOnInit(): void {
     this.initializeOffset();
+    this.loadSections();
+  }
+
+  private loadSections(): void {
+    this.sectionService
+      .getAllWithItems()
+      .then((sections: ISection[]) => {
+        this.sections.set(sections);
+      });
   }
 
   initializeOffset () {

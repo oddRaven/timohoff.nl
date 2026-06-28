@@ -1,15 +1,15 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 :host {
     display: block;
 
     &.active .content {
-        background: $foreground-active-color;
+        background: variables.$foreground-active-color;
     }
 
     .content {
         padding: 5px;
-        background: $foreground-color;
+        background: variables.$foreground-color;
         border-radius: 2px;
         display: block;
 

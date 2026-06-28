@@ -1,4 +1,4 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 menu {
     list-style: none;
@@ -19,12 +19,12 @@ menu {
         padding: 5px 0px;
 
         &.active {
-            color: $important-active-color;
+            color: variables.$important-active-color;
         }
     }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: variables.$mobile-width) {
     :host {
         display: none;
     }

@@ -1,4 +1,4 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 :host {
     display: block;
@@ -19,7 +19,7 @@
     }
 
     section{
-        background: $foreground-active-color;
+        background: variables.$foreground-active-color;
         padding: 5px;
 
         header {

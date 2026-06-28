@@ -1,5 +1,5 @@
 <menu>
-    @for (section of sections; track $index){
+    @for (section of sections(); track $index){
         <li routerLink [fragment]="section.title" [class]="'scroll-active-' + section.title">{{ section.title }}</li>
     }
 </menu>

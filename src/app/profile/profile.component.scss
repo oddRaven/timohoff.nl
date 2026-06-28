@@ -1,4 +1,4 @@
-@import '../shared/variables';
+@use '../shared/variables';
 
 :host {
   width: 240px;
@@ -23,7 +23,7 @@
       object-position: 15% 0;
       display: flex;
       margin: 5px auto;
-      background: $background-color;
+      background: variables.$background-color;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
@@ -39,7 +39,7 @@
 }
 
 
-@media (max-width: $mobile-width) {
+@media (max-width: variables.$mobile-width) {
   :host {
     width: 175px;
   }
