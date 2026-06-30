@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter, ElementRef, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
-import { NgClass, NgIf, NgFor, isPlatformServer } from '@angular/common';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { NgClass, isPlatformServer } from '@angular/common';
 
 import { Timeline } from './timeline';
 import { IWaypoint } from './waypoint';
@@ -8,31 +7,15 @@ import { IWaypoint } from './waypoint';
 @Component({
   selector: 'app-timeline',
   standalone: true,
-  imports: [ NgClass, NgIf, NgFor ],
+  imports: [ NgClass ],
   templateUrl: './timeline.component.html',
-  styleUrl: './timeline.component.scss',
-  animations: [
-    trigger('moveLeft', [
-      state('start', style({
-        left: '{{ startPosition }}px' // Use interpolation for dynamic value
-      }), {params: {startPosition: -150}}),
-      state('end', style({
-        left: '{{ endPosition }}px' // Use interpolation for dynamic value
-      }), {params: {endPosition: -150}}),
-      transition('start => end', [
-        animate('500ms ease-out')
-      ]),
-      transition('end => start', [])
-    ])
-  ]
+  styleUrl: './timeline.component.scss'
 })
 export class TimelineComponent implements AfterViewInit {
   @Input() timeline!: Timeline;
   @Output() selectWaypoint = new EventEmitter<IWaypoint>();
 
-  state = 'start';
-  startPosition = -150;
-  endPosition = -150;
+  selectorLeft = -150;
 
   constructor (
     private elementRef: ElementRef,
@@ -62,15 +45,10 @@ export class TimelineComponent implements AfterViewInit {
       }
     }
 
-    this.startPosition = this.endPosition;
-    this.state = 'start';
-    this.endPosition = 8 + index * 130;
-    window.setTimeout(() => {
-      this.state = 'end';
-    });
+    this.selectorLeft = 8 + index * 130;
   }
 
-  private showCurrent(){
+  private showCurrent() {
     let element = this.elementRef.nativeElement;
     element.scroll(element.scrollWidth, element.scrollHeight);
     element.classList.add('visible');

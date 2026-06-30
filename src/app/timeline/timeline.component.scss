@@ -28,6 +28,7 @@
     border-radius: 50% 50% 0 0;
     left: -150px;
     z-index: 1;
+    transition: left 500ms ease-out;
 }
 
 .phase {

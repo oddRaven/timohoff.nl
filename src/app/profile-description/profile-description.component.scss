@@ -10,3 +10,21 @@
         padding: 2px;
     }
 }
+
+@keyframes fade-enter {
+    from { max-height: 0; }
+    to { max-height: 500px; }
+}
+
+@keyframes fade-leave {
+    from { max-height: 500px; }
+    to { max-height: 0; }
+}
+
+.fade-enter {
+    animation: fade-enter 400ms ease forwards;
+}
+
+.fade-leave {
+    animation: fade-leave 400ms ease forwards;
+}

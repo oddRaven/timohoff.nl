@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { Component, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Experience } from '../models/experience';
@@ -14,13 +13,13 @@ import { NoteDirective } from '../note/note.directive'
 @Component({
   selector: 'app-experiences',
   standalone: true,
-  imports: [ ExperienceOverviewComponent, StickyScrollDirective, TimelineComponent, NgIf, NoteDirective ],
+  imports: [ExperienceOverviewComponent, StickyScrollDirective, TimelineComponent, NoteDirective],
   templateUrl: './experiences.component.html',
   styleUrl: './experiences.component.scss'
 })
 export class ExperiencesComponent {
   selectedExperience? : Experience;
-  timeline? : ITimeline;
+  timeline = signal<ITimeline | null>(null);
 
   constructor (
     private timelineService: TimelineService,
@@ -28,7 +27,7 @@ export class ExperiencesComponent {
   {
     this.timelineService
       .get(1)
-      .then((timeline) => this.timeline = timeline);
+      .then((timeline) => this.timeline.set(timeline));
   }
 
   public selectExperience (waypoint : IWaypoint) {

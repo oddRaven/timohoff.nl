@@ -1,4 +1,4 @@
-<div class="selector" [@moveLeft]="{ value: state, params: { startPosition: startPosition, endPosition: endPosition } }"></div>
+<div class="selector" [style.left.px]="selectorLeft"></div>
 
 @for (phase of timeline.phases; track $index; let phaseIndex = $index) {
     <div class="phase">
