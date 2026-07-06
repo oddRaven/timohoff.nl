@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 
-import { ITimeline, Timeline } from '../../timeline/timeline';
+import { ITimeline, Timeline } from '../../models/timeline';
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,4 @@
-import { IWaypoint } from './waypoint'
+import { IWaypoint } from './waypoint';
 
 export interface Phase {
     color: string;

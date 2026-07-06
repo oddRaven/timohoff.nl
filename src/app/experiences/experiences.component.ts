@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { Experience } from '../models/experience';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { ExperienceOverviewComponent } from '../experience-overview/experience-overview.component';
-import { ITimeline } from '../timeline/timeline';
-import { IWaypoint } from '../timeline/waypoint';
+import { ITimeline } from '../models/timeline';
+import { IWaypoint } from '../models/waypoint';
 import { TimelineService } from '../services/timeline/timeline.service';
 import { StickyScrollDirective } from '../sticky-scroll/sticky-scroll.directive';
 import { NoteDirective } from '../note/note.directive'
@@ -19,7 +19,7 @@ import { NoteDirective } from '../note/note.directive'
 })
 export class ExperiencesComponent {
   selectedExperience? : Experience;
-  timeline = signal<ITimeline | null>(null);
+  timeline = signal<ITimeline>({ phases: [] });
 
   constructor (
     private timelineService: TimelineService,

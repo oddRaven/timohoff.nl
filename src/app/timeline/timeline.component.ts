@@ -1,8 +1,8 @@
 import { Component, Input, Output, EventEmitter, ElementRef, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { NgClass, isPlatformServer } from '@angular/common';
 
-import { Timeline } from './timeline';
-import { IWaypoint } from './waypoint';
+import { Timeline } from '../models/timeline';
+import { IWaypoint } from '../models/waypoint';
 
 @Component({
   selector: 'app-timeline',

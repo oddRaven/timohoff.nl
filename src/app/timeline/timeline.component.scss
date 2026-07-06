@@ -1,7 +1,7 @@
 @use '../shared/variables';
 
 :host {
-    overflow: scroll;
+    overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
     display: block;

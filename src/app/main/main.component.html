@@ -8,6 +8,9 @@
                 @else if (item.profiles) {
                     <app-profiles [profiles]="item.profiles"></app-profiles>
                 }
+                @else if (item.timeline) {
+                    <app-timeline [timeline]="item.timeline" appStickyScroll></app-timeline>
+                }
             }
         </app-main-section>
     }

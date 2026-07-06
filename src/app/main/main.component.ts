@@ -8,6 +8,7 @@ import { PassionsComponent } from '../passions/passions.component';
 import { WebsiteComponent } from '../website/website.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ProfilesComponent } from '../profiles/profiles.component';
+import { TimelineComponent } from '../timeline/timeline.component';
 import { ScrollActiveDirective } from '../scroll-active/scroll-active.directive';
 import { SectionService } from '../services/section/section.service';
 import { ISection } from '../models/section';
@@ -15,7 +16,7 @@ import { ISection } from '../models/section';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [MainSectionComponent, TeamComponent, ExperiencesComponent, PassionsComponent, WebsiteComponent, ContactComponent, ProfilesComponent, ScrollActiveDirective],
+  imports: [MainSectionComponent, TeamComponent, ExperiencesComponent, PassionsComponent, WebsiteComponent, ContactComponent, ProfilesComponent, TimelineComponent, ScrollActiveDirective],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

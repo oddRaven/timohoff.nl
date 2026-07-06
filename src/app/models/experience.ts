@@ -1,4 +1,4 @@
-import { IWaypoint } from '../timeline/waypoint';
+import { IWaypoint } from './waypoint';
 import { IExperience } from '../experience-overview/iexperience';
 import { Article } from './article';
 

@@ -1,4 +1,4 @@
-import { Phase } from './phase'
+import { Phase } from './phase';
 
 export interface ITimeline {
     phases: Phase[];
@@ -6,4 +6,8 @@ export interface ITimeline {
 
 export class Timeline implements ITimeline {
     phases: Phase[] = [];
+
+    public constructor(init?: Partial<Timeline>) {
+        Object.assign(this, init);
+    }
 }

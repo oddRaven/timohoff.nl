@@ -1,9 +1,9 @@
 <p i18n="@@experiencesParagraph">About experiences.</p>
 
-@if (timeline() != null) {
+@if (timeline().phases.length > 0) {
     <app-timeline [timeline]="timeline()" (selectWaypoint)="selectExperience($event)" appStickyScroll></app-timeline>
 
-    @if (selectExperience != null) {
+    @if (selectedExperience != null) {
         <app-experience-overview [experience]="selectedExperience"></app-experience-overview>
     }
 }
