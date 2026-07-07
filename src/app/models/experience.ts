@@ -5,7 +5,7 @@ import { Article } from './article';
 export class Experience implements IWaypoint, IExperience {
     id: number = 0;
     phaseIndex: number = 0;
-    image_source: string = 'https://file.timohoff.nl/placeholder-square.jpg';
+    image_name: string = 'https://file.timohoff.nl/placeholder-square.jpg';
     is_bound: boolean = true;
     title: string = '';
     description: string = '';
