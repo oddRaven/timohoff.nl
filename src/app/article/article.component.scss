@@ -1,0 +1,30 @@
+.article-content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.article-text {
+	flex: 1;
+	margin: 0;
+}
+
+.article-image {
+	width: 220px;
+	max-width: 40%;
+	height: auto;
+	object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+	.article-content {
+		flex-direction: column;
+	}
+
+	.article-image {
+		width: 100%;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,11 @@
+<div class="article-content">
+	<p class="article-text">{{ article.text }}</p>
+
+	@if (article.image_name != null && article.image_name.trim() != '') {
+		<img
+			[src]="'https://file.timohoff.nl/' + article.image_name"
+			[alt]="article.title"
+			class="article-image"
+		/>
+	}
+</div>
