@@ -1,20 +1,26 @@
-<div class="selector" [style.left.px]="selectorLeft"></div>
+<div class="timeline-content">
+    <div class="selector" [style.left.px]="selectorLeft"></div>
 
-@for (phase of timeline.phases; track $index; let phaseIndex = $index) {
-    <div class="phase">
-        <div class="phase-title" [class]="['background-' + phase.color]">{{ phase.title }}</div>
-        <div class="phase-content">
-            @for (waypoint of phase.waypoints; track $index; let waypointIndex = $index) {
-                <div [class]="['waypoint', phaseIndex == 0 && waypointIndex == 0 ? 'first': '']" (click)="select(waypoint)" (keyup.enter)="select(waypoint)">
-                    <div class="waypoint-title">{{ waypoint.title }}</div>
-                    <div class="waypoint-icon">
-                        <img [src]="'https://file.timohoff.nl/' + waypoint.image_name" [ngClass]="[waypoint.is_bound ? 'border-' + phase.color : '']" tabindex="0" />
+    @for (phase of timeline.phases; track $index; let phaseIndex = $index) {
+        <div class="phase">
+            <div class="phase-title" [class]="['background-' + phase.color]">{{ phase.title }}</div>
+            <div class="phase-content">
+                @for (waypoint of phase.waypoints; track $index; let waypointIndex = $index) {
+                    <div [class]="['waypoint', phaseIndex == 0 && waypointIndex == 0 ? 'first': '']" (click)="select(waypoint)" (keyup.enter)="select(waypoint)">
+                        <div class="waypoint-title">{{ waypoint.title }}</div>
+                        <div class="waypoint-icon">
+                            <img [src]="'https://file.timohoff.nl/' + waypoint.image_name" [ngClass]="[waypoint.is_bound ? 'border-' + phase.color : '']" tabindex="0" />
+                        </div>
+                        @if (phaseIndex !== timeline.phases.length - 1 || waypointIndex !== phase.waypoints.length - 1) {
+                            <div class="waypoint-connector"></div>
+                        }
                     </div>
-                    @if (phaseIndex !== timeline.phases.length - 1 || waypointIndex !== phase.waypoints.length - 1) {
-                        <div class="waypoint-connector"></div>
-                    }
-                </div>
-            }
+                }
+            </div>
         </div>
-    </div>
+    }
+</div>
+
+@if (selectedArticle(); as article) {
+    <app-article [article]="article"></app-article>
 }

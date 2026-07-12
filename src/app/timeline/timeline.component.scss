@@ -1,22 +1,31 @@
 @use '../shared/variables';
 
 :host {
-    overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
     display: block;
     visibility: hidden;
-    position: relative;
 
     &.visible {
         visibility: visible;
         animation: fadein 1s;
+    }
+
+    app-article {
+        display: block;
+        background-color: #fff;
     }
 }
 
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.timeline-content {
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: small;
 }
 
 .selector {
