@@ -6,14 +6,14 @@
 </nav>
 
 <app-pop-up (click)="closePopUp()">
-  <app-menu></app-menu>
+  <app-menu [sections]="sections()"></app-menu>
 </app-pop-up>
 
 <div class="container">
   <div class="extra-container">
     <div class="extra">
-      <header app-header></header>
-      <app-menu></app-menu>
+      <header app-header [sections]="sections()"></header>
+      <app-menu [sections]="sections()"></app-menu>
     </div>
   </div>
 

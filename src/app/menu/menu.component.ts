@@ -1,7 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { SectionService } from '../services/section/section.service';
 import { ISection } from '../models/section';
 
 @Component({
@@ -12,13 +11,5 @@ import { ISection } from '../models/section';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  sections = signal<ISection[]>([]);
-
-  constructor(
-    private sectionService: SectionService,
-  ){
-    sectionService
-      .getAll()
-      .then((sections: ISection[]) => this.sections.set(sections));
-  }
+  @Input() sections: ISection[] = [];
 }
